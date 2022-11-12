@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*html": "html",
+        "*njk": "html",
+        "chrono": "cpp",
+        "cmath": "cpp"
+    }
+}
