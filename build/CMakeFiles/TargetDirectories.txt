@@ -1,0 +1,14 @@
+/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles/Rationnels.dir
+/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles/edit_cache.dir
+/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles/rebuild_cache.dir
+/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles/list_install_components.dir
+/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles/install.dir
+/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles/install/local.dir
+/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles/install/strip.dir
+/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/doc/CMakeFiles/html.dir
+/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/doc/CMakeFiles/edit_cache.dir
+/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/doc/CMakeFiles/rebuild_cache.dir
+/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/doc/CMakeFiles/list_install_components.dir
+/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/doc/CMakeFiles/install.dir
+/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/doc/CMakeFiles/install/local.dir
+/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/doc/CMakeFiles/install/strip.dir

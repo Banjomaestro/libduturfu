@@ -13,4 +13,4 @@ template <typename T> class Rationnels {
         
 };
 template<typename T>
-std::ostream& operator<< (std::ostream& stream, const Tableau<T>& v);
+std::ostream& operator<< (std::ostream& stream, const Rationnels<T>& v);

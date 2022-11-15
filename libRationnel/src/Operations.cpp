@@ -1,5 +1,6 @@
-#include "include/Operations.hpp"
+#include "../include/Operations.hpp"
 
+/*
 template<typename T, typename F>
 Rationnels<T> getRationnel(F ratio, int iterations){
     if(ratio == 0 || iterations ==0){
@@ -13,3 +14,4 @@ Rationnels<T> getRationnel(F ratio, int iterations){
         return Rationnels(whole,1)+getRationnel(ratio-whole,iterations-1);
     }
 }
+*/
