@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.13)
+
+# give a name to the project
+project(Example)
+
+# file to compile and name of the executable
+add_executable(Example src/main.cpp)
+
+# include directory
+target_include_directories(Example PRIVATE "include")
+
+# compilation options
+target_compile_features(Example PRIVATE cxx_std_11) # use at least c++ 11
+if (MSVC)
+    target_compile_options(Example PRIVATE /W3)
+else()
+    target_compile_options(Example PRIVATE -Wall -Wextra -Wpedantic -pedantic-errors)
+endif()
+

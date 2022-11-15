@@ -8,7 +8,7 @@ template <typename T> class Rationnels {
         T denominator;
         Rationnels(float ratio);
         Rationnels(T deno, T nume);
-        Rationnels<T> reverse();
+        void reverse();
 
         
 };
