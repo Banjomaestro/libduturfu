@@ -7,12 +7,14 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/CMakeLists.txt"
+  "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/CMakeLists.txt"
+  "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/doc/CMakeLists.txt"
+  "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/doc/Doxyfile-html.cmake"
   "CMakeFiles/3.24.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.24.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.24.2/CMakeSystem.cmake"
-  "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/libRationnel/CMakeLists.txt"
-  "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/libRationnel/doc/CMakeLists.txt"
-  "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/libRationnel/doc/Doxyfile-html.cmake"
+  "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/my_examples/CMakeLists.txt"
   "/usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
@@ -48,12 +50,15 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "doc/Doxyfile-html"
-  "doc/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "INTERFACE/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "INTERFACE/doc/Doxyfile-html"
+  "INTERFACE/doc/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "my_examples/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Rationnels.dir/DependInfo.cmake"
-  "doc/CMakeFiles/html.dir/DependInfo.cmake"
+  "INTERFACE/CMakeFiles/Rationnels.dir/DependInfo.cmake"
+  "INTERFACE/doc/CMakeFiles/html.dir/DependInfo.cmake"
+  "my_examples/CMakeFiles/main.dir/DependInfo.cmake"
   )

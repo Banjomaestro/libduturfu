@@ -54,7 +54,7 @@ RM = /usr/local/Cellar/cmake/3.24.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/libRationnel"
+CMAKE_SOURCE_DIR = "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu"
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build"
@@ -63,85 +63,144 @@ CMAKE_BINARY_DIR = "/Users/mac/Documents/lessons/imac/second year/first semester
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Rationnels.dir/all
-all: doc/all
+all: INTERFACE/all
+all: my_examples/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: doc/preinstall
+preinstall: INTERFACE/preinstall
+preinstall: my_examples/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Rationnels.dir/clean
-clean: doc/clean
+clean: INTERFACE/clean
+clean: my_examples/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory doc
+# Directory level rules for directory INTERFACE
 
 # Recursive "all" directory target.
-doc/all:
-.PHONY : doc/all
+INTERFACE/all: INTERFACE/CMakeFiles/Rationnels.dir/all
+INTERFACE/all: INTERFACE/doc/all
+.PHONY : INTERFACE/all
 
 # Recursive "preinstall" directory target.
-doc/preinstall:
-.PHONY : doc/preinstall
+INTERFACE/preinstall: INTERFACE/doc/preinstall
+.PHONY : INTERFACE/preinstall
 
 # Recursive "clean" directory target.
-doc/clean: doc/CMakeFiles/html.dir/clean
-.PHONY : doc/clean
+INTERFACE/clean: INTERFACE/CMakeFiles/Rationnels.dir/clean
+INTERFACE/clean: INTERFACE/doc/clean
+.PHONY : INTERFACE/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Rationnels.dir
+# Directory level rules for directory INTERFACE/doc
+
+# Recursive "all" directory target.
+INTERFACE/doc/all:
+.PHONY : INTERFACE/doc/all
+
+# Recursive "preinstall" directory target.
+INTERFACE/doc/preinstall:
+.PHONY : INTERFACE/doc/preinstall
+
+# Recursive "clean" directory target.
+INTERFACE/doc/clean: INTERFACE/doc/CMakeFiles/html.dir/clean
+.PHONY : INTERFACE/doc/clean
+
+#=============================================================================
+# Directory level rules for directory my_examples
+
+# Recursive "all" directory target.
+my_examples/all: my_examples/CMakeFiles/main.dir/all
+.PHONY : my_examples/all
+
+# Recursive "preinstall" directory target.
+my_examples/preinstall:
+.PHONY : my_examples/preinstall
+
+# Recursive "clean" directory target.
+my_examples/clean: my_examples/CMakeFiles/main.dir/clean
+.PHONY : my_examples/clean
+
+#=============================================================================
+# Target rules for target INTERFACE/CMakeFiles/Rationnels.dir
 
 # All Build rule for target.
-CMakeFiles/Rationnels.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rationnels.dir/build.make CMakeFiles/Rationnels.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rationnels.dir/build.make CMakeFiles/Rationnels.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" --progress-num=1,2 "Built target Rationnels"
-.PHONY : CMakeFiles/Rationnels.dir/all
+INTERFACE/CMakeFiles/Rationnels.dir/all:
+	$(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/depend
+	$(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" --progress-num=1,2,3 "Built target Rationnels"
+.PHONY : INTERFACE/CMakeFiles/Rationnels.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Rationnels.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Rationnels.dir/all
+INTERFACE/CMakeFiles/Rationnels.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/CMakeFiles/Rationnels.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" 0
-.PHONY : CMakeFiles/Rationnels.dir/rule
+.PHONY : INTERFACE/CMakeFiles/Rationnels.dir/rule
 
 # Convenience name for target.
-Rationnels: CMakeFiles/Rationnels.dir/rule
+Rationnels: INTERFACE/CMakeFiles/Rationnels.dir/rule
 .PHONY : Rationnels
 
 # clean rule for target.
-CMakeFiles/Rationnels.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Rationnels.dir/build.make CMakeFiles/Rationnels.dir/clean
-.PHONY : CMakeFiles/Rationnels.dir/clean
+INTERFACE/CMakeFiles/Rationnels.dir/clean:
+	$(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/clean
+.PHONY : INTERFACE/CMakeFiles/Rationnels.dir/clean
 
 #=============================================================================
-# Target rules for target doc/CMakeFiles/html.dir
+# Target rules for target INTERFACE/doc/CMakeFiles/html.dir
 
 # All Build rule for target.
-doc/CMakeFiles/html.dir/all:
-	$(MAKE) $(MAKESILENT) -f doc/CMakeFiles/html.dir/build.make doc/CMakeFiles/html.dir/depend
-	$(MAKE) $(MAKESILENT) -f doc/CMakeFiles/html.dir/build.make doc/CMakeFiles/html.dir/build
+INTERFACE/doc/CMakeFiles/html.dir/all:
+	$(MAKE) $(MAKESILENT) -f INTERFACE/doc/CMakeFiles/html.dir/build.make INTERFACE/doc/CMakeFiles/html.dir/depend
+	$(MAKE) $(MAKESILENT) -f INTERFACE/doc/CMakeFiles/html.dir/build.make INTERFACE/doc/CMakeFiles/html.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" --progress-num= "Built target html"
-.PHONY : doc/CMakeFiles/html.dir/all
+.PHONY : INTERFACE/doc/CMakeFiles/html.dir/all
 
 # Build rule for subdir invocation for target.
-doc/CMakeFiles/html.dir/rule: cmake_check_build_system
+INTERFACE/doc/CMakeFiles/html.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 doc/CMakeFiles/html.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/doc/CMakeFiles/html.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" 0
-.PHONY : doc/CMakeFiles/html.dir/rule
+.PHONY : INTERFACE/doc/CMakeFiles/html.dir/rule
 
 # Convenience name for target.
-html: doc/CMakeFiles/html.dir/rule
+html: INTERFACE/doc/CMakeFiles/html.dir/rule
 .PHONY : html
 
 # clean rule for target.
-doc/CMakeFiles/html.dir/clean:
-	$(MAKE) $(MAKESILENT) -f doc/CMakeFiles/html.dir/build.make doc/CMakeFiles/html.dir/clean
-.PHONY : doc/CMakeFiles/html.dir/clean
+INTERFACE/doc/CMakeFiles/html.dir/clean:
+	$(MAKE) $(MAKESILENT) -f INTERFACE/doc/CMakeFiles/html.dir/build.make INTERFACE/doc/CMakeFiles/html.dir/clean
+.PHONY : INTERFACE/doc/CMakeFiles/html.dir/clean
+
+#=============================================================================
+# Target rules for target my_examples/CMakeFiles/main.dir
+
+# All Build rule for target.
+my_examples/CMakeFiles/main.dir/all: INTERFACE/CMakeFiles/Rationnels.dir/all
+	$(MAKE) $(MAKESILENT) -f my_examples/CMakeFiles/main.dir/build.make my_examples/CMakeFiles/main.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_examples/CMakeFiles/main.dir/build.make my_examples/CMakeFiles/main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" --progress-num=4,5 "Built target main"
+.PHONY : my_examples/CMakeFiles/main.dir/all
+
+# Build rule for subdir invocation for target.
+my_examples/CMakeFiles/main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_examples/CMakeFiles/main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" 0
+.PHONY : my_examples/CMakeFiles/main.dir/rule
+
+# Convenience name for target.
+main: my_examples/CMakeFiles/main.dir/rule
+.PHONY : main
+
+# clean rule for target.
+my_examples/CMakeFiles/main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_examples/CMakeFiles/main.dir/build.make my_examples/CMakeFiles/main.dir/clean
+.PHONY : my_examples/CMakeFiles/main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

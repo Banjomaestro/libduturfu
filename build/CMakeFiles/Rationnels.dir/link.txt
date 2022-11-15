@@ -1,2 +1,0 @@
-/usr/bin/ar qc libRationnels.a CMakeFiles/Rationnels.dir/src/Operations.cpp.o
-/usr/bin/ranlib libRationnels.a
