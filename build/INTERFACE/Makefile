@@ -199,29 +199,29 @@ src/Operations.cpp.s:
 	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.s
 .PHONY : src/Operations.cpp.s
 
-src/RationnelsDef.o: src/RationnelsDef.cpp.o
-.PHONY : src/RationnelsDef.o
+src/Rationnels.o: src/Rationnels.cpp.o
+.PHONY : src/Rationnels.o
 
 # target to build an object file
-src/RationnelsDef.cpp.o:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/RationnelsDef.cpp.o
-.PHONY : src/RationnelsDef.cpp.o
+src/Rationnels.cpp.o:
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o
+.PHONY : src/Rationnels.cpp.o
 
-src/RationnelsDef.i: src/RationnelsDef.cpp.i
-.PHONY : src/RationnelsDef.i
+src/Rationnels.i: src/Rationnels.cpp.i
+.PHONY : src/Rationnels.i
 
 # target to preprocess a source file
-src/RationnelsDef.cpp.i:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/RationnelsDef.cpp.i
-.PHONY : src/RationnelsDef.cpp.i
+src/Rationnels.cpp.i:
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.i
+.PHONY : src/Rationnels.cpp.i
 
-src/RationnelsDef.s: src/RationnelsDef.cpp.s
-.PHONY : src/RationnelsDef.s
+src/Rationnels.s: src/Rationnels.cpp.s
+.PHONY : src/Rationnels.s
 
 # target to generate assembly for a file
-src/RationnelsDef.cpp.s:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/RationnelsDef.cpp.s
-.PHONY : src/RationnelsDef.cpp.s
+src/Rationnels.cpp.s:
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.s
+.PHONY : src/Rationnels.cpp.s
 
 # Help Target
 help:
@@ -239,9 +239,9 @@ help:
 	@echo "... src/Operations.o"
 	@echo "... src/Operations.i"
 	@echo "... src/Operations.s"
-	@echo "... src/RationnelsDef.o"
-	@echo "... src/RationnelsDef.i"
-	@echo "... src/RationnelsDef.s"
+	@echo "... src/Rationnels.o"
+	@echo "... src/Rationnels.i"
+	@echo "... src/Rationnels.s"
 .PHONY : help
 
 

@@ -1,5 +1,5 @@
-INTERFACE/CMakeFiles/Rationnels.dir/src/RationnelsDef.cpp.o: \
-  /Users/mac/Documents/lessons/imac/second\ year/first\ semester/libduturfu/Rationnels/src/RationnelsDef.cpp \
+INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o: \
+  /Users/mac/Documents/lessons/imac/second\ year/first\ semester/libduturfu/Rationnels/src/Rationnels.cpp \
   /Users/mac/Documents/lessons/imac/second\ year/first\ semester/libduturfu/Rationnels/src/../include/Rationnels.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__config \
@@ -416,4 +416,6 @@ INTERFACE/CMakeFiles/Rationnels.dir/src/RationnelsDef.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fsblkcnt_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/_types/_nl_item.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__bsd_locale_defaults.h
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/math.h
