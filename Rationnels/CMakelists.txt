@@ -4,8 +4,8 @@ cmake_minimum_required(VERSION 3.13)
 project(Rationnels LANGUAGES C CXX)
 
 # automatic get all files in a directory
-file(GLOB_RECURSE source_files src/*.cpp)
-file(GLOB_RECURSE header_files include/*.hpp)
+file(GLOB_RECURSE source_files src/Rationnels.cpp src/Operations.cpp )
+file(GLOB_RECURSE header_files include/*.hpp include/*.h)
 
 # call the CMakeLists.txt to make the documentation (Doxygen)
 find_package(Doxygen OPTIONAL_COMPONENTS QUIET)

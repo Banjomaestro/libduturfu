@@ -1,7 +1,11 @@
 #include "../include/Operations.hpp"
 
 
-template<typename T, typename F>
+void Operations:: lil(){
+
+}
+
+/*template<typename T, typename F>
 Rationnels<T> getRationnel(F ratio, int iterations){
     if(ratio == 0 || iterations ==0){
         return Rationnels<T>(0,1);
@@ -13,4 +17,4 @@ Rationnels<T> getRationnel(F ratio, int iterations){
         int whole = floor(ratio);
         return Rationnels<T>(whole,1)+getRationnel(ratio-whole,iterations-1);
     }
-}
+}*/

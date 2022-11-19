@@ -1,10 +1,12 @@
 #include <stdlib.h>
-#include <iostream>
 #include "Rationnels.hpp"
-
+#include "Operations.hpp"
 
 int main(){
     std::cout << "lul" <<std::endl;
-    //Rationnels<int> test = Rationnels<int>(2,3);
+    Operations test;
+    Rationnels testo ;
+    //Rationnels<int> test1 = Rationnels<int>(2,3);
+
     return 0;
 }
