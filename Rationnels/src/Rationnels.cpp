@@ -2,9 +2,9 @@
 
 Rationnels ::Rationnels(int nume, int deno){
 
-    /*int gcd = std::__gcd(nume,deno);
+    int gcd = std::__algo_gcd(nume,deno);
     denominator = deno/gcd;
-    numerator = nume/gcd;*/
+    numerator = nume/gcd;
 }
 
 
@@ -17,9 +17,7 @@ Rationnels ::Rationnels(){
 
 Rationnels ::Rationnels(float ratio){
 
-    /*int gcd = std::__gcd(nume,deno);
-    denominator = deno/gcd;
-    numerator = nume/gcd;*/
+    *this = getRationnel(ratio,50);
 }
 
 
@@ -68,6 +66,15 @@ Rationnels Rationnels::operator/(const Rationnels rationnel){
     return Rationnels(numerator*rationnel.denominator,denominator*rationnel.numerator);
 }
 
+Rationnels Rationnels::operator-(const Rationnels rationnel){
+    return Rationnels((numerator*rationnel.denominator - denominator*rationnel.numerator),denominator*rationnel.denominator);
+
+}
+
+Rationnels Rationnels::operator-(){
+    return Rationnels(-this->numerator,this->denominator);    
+}
+
 
 Rationnels Rationnels::squareRoot(){
 
@@ -100,4 +107,28 @@ std::ostream& operator<< (std::ostream& stream, const Rationnels v){
     return stream;
     
 
+}
+
+Rationnels Rationnels::getRationnel(float ratio, int iterations){
+    if(ratio == 0 || iterations ==0){
+        return Rationnels(0,1);
+    }else if(ratio<1){
+        Rationnels toReturn = getRationnel(1/ratio, iterations);
+        toReturn.reverse();
+        return toReturn;
+    }else if(ratio>=1){
+        int whole = floor(ratio);
+        return Rationnels(whole,1)+getRationnel(ratio-whole,iterations-1);
+    }
+}
+
+Rationnels Rationnels::reverse(){
+    int temp = denominator;
+    this->denominator = numerator;
+    this->numerator = temp;
+}
+
+std::ostream& operator<< (std::ostream& stream, const Rationnels& v){
+    std::cout<<" numerator :  "<<v.numerator<<std::endl<<" denominator :  "<<v.denominator<<std::endl;
+    return stream;
 }
