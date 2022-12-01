@@ -216,6 +216,9 @@ DOXYGEN_DOT_EXECUTABLE:FILEPATH=/usr/local/bin/dot
 //Doxygen documentation generation tool (http://www.doxygen.org)
 DOXYGEN_EXECUTABLE:FILEPATH=/usr/local/bin/doxygen
 
+//The directory containing a CMake configuration file for GTest.
+GTest_DIR:PATH=/usr/local/lib/cmake/GTest
+
 //Value Computed by CMake
 Rationnels_BINARY_DIR:STATIC=/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE
 
@@ -320,6 +323,8 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu
@@ -342,7 +347,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -391,4 +396,6 @@ DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
 DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
 //Details about finding Doxygen
 FIND_PACKAGE_MESSAGE_DETAILS_Doxygen:INTERNAL=[/usr/local/bin/doxygen][cfound components: doxygen dot ][v1.9.5()]
+//Details about finding GTest
+FIND_PACKAGE_MESSAGE_DETAILS_GTest:INTERNAL=[/usr/local/lib/cmake/GTest/GTestConfig.cmake][c ][v1.12.1()]
 

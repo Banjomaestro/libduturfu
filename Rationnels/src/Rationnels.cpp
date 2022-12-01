@@ -2,7 +2,7 @@
 
 Rationnels ::Rationnels(int nume, int deno){
 
-    int gcd = std::__algo_gcd(nume,deno);
+    const long gcd = std::__algo_gcd(nume,deno);
     denominator = deno/gcd;
     numerator = nume/gcd;
 }
@@ -128,7 +128,57 @@ Rationnels Rationnels::reverse(){
     this->numerator = temp;
 }
 
+
+Rationnels Rationnels::exponentielle(const Rationnels &R) {
+    
+    int k = R.denominator*log(2) - log(2)/2;
+    Rationnels r = (R.numerator-k*log(2)*R.denominator)/R.denominator;
+ 
+    return Rationnels(exponentielle(r)*pow(2,k));
+}
+
+Rationnels Rationnels::logarithme() {
+    if (numerator==0 || denominator==0){
+        return 0;
+    }
+
+    return Rationnels(log(numerator)-log(denominator));
+}
+
+Rationnels Rationnels::cosinus() {
+    if (numerator==0){
+        return 1;
+    }
+
+    float k = numerator/denominator;
+
+    return Rationnels(cos(k));
+}
+
+Rationnels Rationnels::sinus() {
+    if (numerator==0){
+        return 0;
+    }
+
+    float k = numerator/denominator;
+
+    return Rationnels(sin(k));
+}
+
+Rationnels Rationnels::tangente() {
+    if (numerator==0){
+        return 0;
+    }
+
+    float k = numerator/denominator;
+
+    return Rationnels(tan(k));
+}
+
+
+
 std::ostream& operator<< (std::ostream& stream, const Rationnels& v){
     std::cout<<" numerator :  "<<v.numerator<<std::endl<<" denominator :  "<<v.denominator<<std::endl;
     return stream;
 }
+

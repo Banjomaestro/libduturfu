@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build//CMakeFiles/progress.marks"
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE/UnitTest//CMakeFiles/progress.marks"
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/UnitTest/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/UnitTest/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,70 +148,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/UnitTest/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/UnitTest/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named Rationnels
+# Convenience name for target.
+INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/rule:
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/rule
+.PHONY : INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/rule
 
-# Build rule for target.
-Rationnels: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Rationnels
-.PHONY : Rationnels
-
-# fast build rule for target.
-Rationnels/fast:
-	$(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/build
-.PHONY : Rationnels/fast
-
-#=============================================================================
-# Target rules for targets named html
-
-# Build rule for target.
-html: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 html
-.PHONY : html
-
-# fast build rule for target.
-html/fast:
-	$(MAKE) $(MAKESILENT) -f INTERFACE/doc/CMakeFiles/html.dir/build.make INTERFACE/doc/CMakeFiles/html.dir/build
-.PHONY : html/fast
-
-#=============================================================================
-# Target rules for targets named UnitTest
-
-# Build rule for target.
-UnitTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UnitTest
+# Convenience name for target.
+UnitTest: INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/rule
 .PHONY : UnitTest
 
 # fast build rule for target.
 UnitTest/fast:
-	$(MAKE) $(MAKESILENT) -f INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/build.make INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/build
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/build.make INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/build
 .PHONY : UnitTest/fast
 
-#=============================================================================
-# Target rules for targets named main
+src/test.o: src/test.cpp.o
+.PHONY : src/test.o
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+# target to build an object file
+src/test.cpp.o:
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/build.make INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/src/test.cpp.o
+.PHONY : src/test.cpp.o
 
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f my_examples/CMakeFiles/main.dir/build.make my_examples/CMakeFiles/main.dir/build
-.PHONY : main/fast
+src/test.i: src/test.cpp.i
+.PHONY : src/test.i
+
+# target to preprocess a source file
+src/test.cpp.i:
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/build.make INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/src/test.cpp.i
+.PHONY : src/test.cpp.i
+
+src/test.s: src/test.cpp.s
+.PHONY : src/test.s
+
+# target to generate assembly for a file
+src/test.cpp.s:
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/build.make INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/src/test.cpp.s
+.PHONY : src/test.cpp.s
 
 # Help Target
 help:
@@ -225,10 +211,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... html"
-	@echo "... Rationnels"
 	@echo "... UnitTest"
-	@echo "... main"
+	@echo "... src/test.o"
+	@echo "... src/test.i"
+	@echo "... src/test.s"
 .PHONY : help
 
 
@@ -240,6 +226,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

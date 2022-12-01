@@ -18,6 +18,13 @@ int main(){
     std::cout<<"testo"<<testo+testo;
     std::cout<<"testo"<<testo-Rationnels(1,4);
 
+    Rationnels deRatio = Rationnels(0.3);
+    std::cout<<"testing tests" <<std::endl<<std::endl;
+    std::cout<<0.3<<"   =   "<<(float) deRatio.numerator/deRatio.denominator<<std::endl;
+    std::cout<<deRatio.numerator<<std::endl;
+    std::cout<<deRatio.denominator<<std::endl;
+
+
 
     return 0;
 }

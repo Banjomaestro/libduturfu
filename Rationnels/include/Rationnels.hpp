@@ -24,6 +24,12 @@ class Rationnels {
         Rationnels squareRoot();
         Rationnels power(float n);
         Rationnels getRationnel(float ratio, int iterations);
+        Rationnels exponentielle(const Rationnels &R);
+        Rationnels logarithme();
+        Rationnels cosinus();
+        Rationnels sinus();
+        Rationnels tangente();
+    
         
 };
 

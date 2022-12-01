@@ -83,16 +83,34 @@ clean: my_examples/clean
 # Recursive "all" directory target.
 INTERFACE/all: INTERFACE/CMakeFiles/Rationnels.dir/all
 INTERFACE/all: INTERFACE/doc/all
+INTERFACE/all: INTERFACE/UnitTest/all
 .PHONY : INTERFACE/all
 
 # Recursive "preinstall" directory target.
 INTERFACE/preinstall: INTERFACE/doc/preinstall
+INTERFACE/preinstall: INTERFACE/UnitTest/preinstall
 .PHONY : INTERFACE/preinstall
 
 # Recursive "clean" directory target.
 INTERFACE/clean: INTERFACE/CMakeFiles/Rationnels.dir/clean
 INTERFACE/clean: INTERFACE/doc/clean
+INTERFACE/clean: INTERFACE/UnitTest/clean
 .PHONY : INTERFACE/clean
+
+#=============================================================================
+# Directory level rules for directory INTERFACE/UnitTest
+
+# Recursive "all" directory target.
+INTERFACE/UnitTest/all: INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/all
+.PHONY : INTERFACE/UnitTest/all
+
+# Recursive "preinstall" directory target.
+INTERFACE/UnitTest/preinstall:
+.PHONY : INTERFACE/UnitTest/preinstall
+
+# Recursive "clean" directory target.
+INTERFACE/UnitTest/clean: INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/clean
+.PHONY : INTERFACE/UnitTest/clean
 
 #=============================================================================
 # Directory level rules for directory INTERFACE/doc
@@ -177,13 +195,39 @@ INTERFACE/doc/CMakeFiles/html.dir/clean:
 .PHONY : INTERFACE/doc/CMakeFiles/html.dir/clean
 
 #=============================================================================
+# Target rules for target INTERFACE/UnitTest/CMakeFiles/UnitTest.dir
+
+# All Build rule for target.
+INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/all: INTERFACE/CMakeFiles/Rationnels.dir/all
+	$(MAKE) $(MAKESILENT) -f INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/build.make INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/build.make INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" --progress-num=4,5 "Built target UnitTest"
+.PHONY : INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/all
+
+# Build rule for subdir invocation for target.
+INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" 0
+.PHONY : INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/rule
+
+# Convenience name for target.
+UnitTest: INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/rule
+.PHONY : UnitTest
+
+# clean rule for target.
+INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/build.make INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/clean
+.PHONY : INTERFACE/UnitTest/CMakeFiles/UnitTest.dir/clean
+
+#=============================================================================
 # Target rules for target my_examples/CMakeFiles/main.dir
 
 # All Build rule for target.
 my_examples/CMakeFiles/main.dir/all: INTERFACE/CMakeFiles/Rationnels.dir/all
 	$(MAKE) $(MAKESILENT) -f my_examples/CMakeFiles/main.dir/build.make my_examples/CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f my_examples/CMakeFiles/main.dir/build.make my_examples/CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" --progress-num=4,5 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" --progress-num=6,7 "Built target main"
 .PHONY : my_examples/CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
