@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.24.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu"
+CMAKE_SOURCE_DIR = /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build"
+CMAKE_BINARY_DIR = /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build
 
 # Utility rule file for html.
 
@@ -67,7 +67,7 @@ include INTERFACE/doc/CMakeFiles/html.dir/compiler_depend.make
 include INTERFACE/doc/CMakeFiles/html.dir/progress.make
 
 INTERFACE/doc/CMakeFiles/html:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE/doc" && /usr/local/bin/doxygen /Users/mac/Documents/lessons/imac/second\ year/first\ semester/libduturfu/build/INTERFACE/doc/Doxyfile-html
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE/doc && /usr/local/bin/doxygen /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE/doc/Doxyfile-html
 
 html: INTERFACE/doc/CMakeFiles/html
 html: INTERFACE/doc/CMakeFiles/html.dir/build.make
@@ -78,10 +78,10 @@ INTERFACE/doc/CMakeFiles/html.dir/build: html
 .PHONY : INTERFACE/doc/CMakeFiles/html.dir/build
 
 INTERFACE/doc/CMakeFiles/html.dir/clean:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE/doc" && $(CMAKE_COMMAND) -P CMakeFiles/html.dir/cmake_clean.cmake
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE/doc && $(CMAKE_COMMAND) -P CMakeFiles/html.dir/cmake_clean.cmake
 .PHONY : INTERFACE/doc/CMakeFiles/html.dir/clean
 
 INTERFACE/doc/CMakeFiles/html.dir/depend:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/doc" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE/doc" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE/doc/CMakeFiles/html.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/doc /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE/doc /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE/doc/CMakeFiles/html.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : INTERFACE/doc/CMakeFiles/html.dir/depend
 

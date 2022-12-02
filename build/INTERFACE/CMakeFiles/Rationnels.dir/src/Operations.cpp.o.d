@@ -1,7 +1,7 @@
 INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.o: \
-  /Users/mac/Documents/lessons/imac/second\ year/first\ semester/libduturfu/Rationnels/src/Operations.cpp \
-  /Users/mac/Documents/lessons/imac/second\ year/first\ semester/libduturfu/Rationnels/src/../include/Operations.hpp \
-  /Users/mac/Documents/lessons/imac/second\ year/first\ semester/libduturfu/Rationnels/include/Rationnels.hpp \
+  /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/src/Operations.cpp \
+  /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/src/../include/Operations.hpp \
+  /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/include/Rationnels.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__config_site \

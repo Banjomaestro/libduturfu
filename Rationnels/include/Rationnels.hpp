@@ -21,20 +21,28 @@ class Rationnels {
         Rationnels operator-(const Rationnels rationnel);
         Rationnels operator-();
         Rationnels operator/(const Rationnels rationnel);
+        bool operator==(const Rationnels &R);
+        bool operator!=(const Rationnels &R);
+        bool operator<=(Rationnels R);
+        bool operator<(Rationnels R);
+        bool operator>(Rationnels R);
+        bool operator>=(Rationnels R);
         Rationnels squareRoot();
         Rationnels power(float n);
         Rationnels getRationnel(float ratio, int iterations);
-        Rationnels exponentielle(const Rationnels &R);
+        Rationnels exponentielle();
         Rationnels logarithme();
         Rationnels cosinus();
         Rationnels sinus();
         Rationnels tangente();
-    
+        Rationnels absolue();
+        int partie_entiere();
+        Rationnels virgule_flottante_Ratio(float F);
+        Rationnels Ratio_virgule_flottante(float F);
+        
         
 };
 
 std::ostream& operator<< (std::ostream& stream, const Rationnels& v);
-
-
 
 
