@@ -175,30 +175,6 @@ Rationnels/fast:
 	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/build
 .PHONY : Rationnels/fast
 
-src/Operations.o: src/Operations.cpp.o
-.PHONY : src/Operations.o
-
-# target to build an object file
-src/Operations.cpp.o:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.o
-.PHONY : src/Operations.cpp.o
-
-src/Operations.i: src/Operations.cpp.i
-.PHONY : src/Operations.i
-
-# target to preprocess a source file
-src/Operations.cpp.i:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.i
-.PHONY : src/Operations.cpp.i
-
-src/Operations.s: src/Operations.cpp.s
-.PHONY : src/Operations.s
-
-# target to generate assembly for a file
-src/Operations.cpp.s:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.s
-.PHONY : src/Operations.cpp.s
-
 src/Rationnels.o: src/Rationnels.cpp.o
 .PHONY : src/Rationnels.o
 
@@ -236,9 +212,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Rationnels"
-	@echo "... src/Operations.o"
-	@echo "... src/Operations.i"
-	@echo "... src/Operations.s"
 	@echo "... src/Rationnels.o"
 	@echo "... src/Rationnels.i"
 	@echo "... src/Rationnels.s"

@@ -1,11 +1,6 @@
 [
 {
   "directory": "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I\"/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/include\" -I\"/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/include\"  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -Wall -Wextra -Wpedantic -pedantic-errors -std=gnu++11 -o CMakeFiles/Rationnels.dir/src/Operations.cpp.o -c \"/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/src/Operations.cpp\"",
-  "file": "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/src/Operations.cpp"
-},
-{
-  "directory": "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE",
   "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I\"/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/include\" -I\"/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/include\"  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -Wall -Wextra -Wpedantic -pedantic-errors -std=gnu++11 -o CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o -c \"/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/src/Rationnels.cpp\"",
   "file": "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/src/Rationnels.cpp"
 },
