@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.24.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu"
+CMAKE_SOURCE_DIR = /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build"
+CMAKE_BINARY_DIR = /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build
 
 # Include any dependencies generated for this target.
 include INTERFACE/CMakeFiles/Rationnels.dir/depend.make
@@ -70,32 +70,32 @@ include INTERFACE/CMakeFiles/Rationnels.dir/progress.make
 include INTERFACE/CMakeFiles/Rationnels.dir/flags.make
 
 INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.o: INTERFACE/CMakeFiles/Rationnels.dir/flags.make
-INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.o: /Users/mac/Documents/lessons/imac/second\ year/first\ semester/libduturfu/Rationnels/src/Operations.cpp
+INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.o: /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/src/Operations.cpp
 INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.o: INTERFACE/CMakeFiles/Rationnels.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.o"
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.o -MF CMakeFiles/Rationnels.dir/src/Operations.cpp.o.d -o CMakeFiles/Rationnels.dir/src/Operations.cpp.o -c "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/src/Operations.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.o"
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.o -MF CMakeFiles/Rationnels.dir/src/Operations.cpp.o.d -o CMakeFiles/Rationnels.dir/src/Operations.cpp.o -c /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/src/Operations.cpp
 
 INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rationnels.dir/src/Operations.cpp.i"
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/src/Operations.cpp" > CMakeFiles/Rationnels.dir/src/Operations.cpp.i
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/src/Operations.cpp > CMakeFiles/Rationnels.dir/src/Operations.cpp.i
 
 INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rationnels.dir/src/Operations.cpp.s"
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/src/Operations.cpp" -o CMakeFiles/Rationnels.dir/src/Operations.cpp.s
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/src/Operations.cpp -o CMakeFiles/Rationnels.dir/src/Operations.cpp.s
 
 INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o: INTERFACE/CMakeFiles/Rationnels.dir/flags.make
-INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o: /Users/mac/Documents/lessons/imac/second\ year/first\ semester/libduturfu/Rationnels/src/Rationnels.cpp
+INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o: /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/src/Rationnels.cpp
 INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o: INTERFACE/CMakeFiles/Rationnels.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o"
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o -MF CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o.d -o CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o -c "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/src/Rationnels.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o"
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o -MF CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o.d -o CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o -c /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/src/Rationnels.cpp
 
 INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rationnels.dir/src/Rationnels.cpp.i"
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/src/Rationnels.cpp" > CMakeFiles/Rationnels.dir/src/Rationnels.cpp.i
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/src/Rationnels.cpp > CMakeFiles/Rationnels.dir/src/Rationnels.cpp.i
 
 INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rationnels.dir/src/Rationnels.cpp.s"
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/src/Rationnels.cpp" -o CMakeFiles/Rationnels.dir/src/Rationnels.cpp.s
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/src/Rationnels.cpp -o CMakeFiles/Rationnels.dir/src/Rationnels.cpp.s
 
 # Object files for target Rationnels
 Rationnels_OBJECTS = \
@@ -109,19 +109,19 @@ INTERFACE/libRationnels.a: INTERFACE/CMakeFiles/Rationnels.dir/src/Operations.cp
 INTERFACE/libRationnels.a: INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o
 INTERFACE/libRationnels.a: INTERFACE/CMakeFiles/Rationnels.dir/build.make
 INTERFACE/libRationnels.a: INTERFACE/CMakeFiles/Rationnels.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libRationnels.a"
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE" && $(CMAKE_COMMAND) -P CMakeFiles/Rationnels.dir/cmake_clean_target.cmake
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Rationnels.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libRationnels.a"
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE && $(CMAKE_COMMAND) -P CMakeFiles/Rationnels.dir/cmake_clean_target.cmake
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Rationnels.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 INTERFACE/CMakeFiles/Rationnels.dir/build: INTERFACE/libRationnels.a
 .PHONY : INTERFACE/CMakeFiles/Rationnels.dir/build
 
 INTERFACE/CMakeFiles/Rationnels.dir/clean:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE" && $(CMAKE_COMMAND) -P CMakeFiles/Rationnels.dir/cmake_clean.cmake
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE && $(CMAKE_COMMAND) -P CMakeFiles/Rationnels.dir/cmake_clean.cmake
 .PHONY : INTERFACE/CMakeFiles/Rationnels.dir/clean
 
 INTERFACE/CMakeFiles/Rationnels.dir/depend:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE/CMakeFiles/Rationnels.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE/CMakeFiles/Rationnels.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : INTERFACE/CMakeFiles/Rationnels.dir/depend
 

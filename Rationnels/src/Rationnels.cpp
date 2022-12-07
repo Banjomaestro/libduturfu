@@ -2,9 +2,15 @@
 
 Rationnels ::Rationnels(long nume, long deno){
 
+    if (denominator==0){
+        throw std::domain_error("divide by zero");
+    }
+    
     const long gcd = std::__algo_gcd(nume,deno);
     numerator = nume/gcd;
     denominator = deno/gcd;
+
+
 }
 
 
@@ -18,6 +24,7 @@ Rationnels ::Rationnels(){
 Rationnels ::Rationnels(float ratio){
 
     *this = getRationnel(ratio,100);
+
 }
 
 

@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <stdlib.h>
 #include <algorithm>
+#include <stdexcept>
 
 class Rationnels {
         

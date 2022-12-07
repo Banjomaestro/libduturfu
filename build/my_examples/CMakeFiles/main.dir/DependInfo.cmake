@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/my_examples/src/main.cpp" "my_examples/CMakeFiles/main.dir/src/main.cpp.o" "gcc" "my_examples/CMakeFiles/main.dir/src/main.cpp.o.d"
+  "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/my_examples/src/main.cpp" "my_examples/CMakeFiles/main.dir/src/main.cpp.o" "gcc" "my_examples/CMakeFiles/main.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE/CMakeFiles/Rationnels.dir/DependInfo.cmake"
+  "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE/CMakeFiles/Rationnels.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

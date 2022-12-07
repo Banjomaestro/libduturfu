@@ -11,7 +11,7 @@ int main(){
     Rationnels teste= Rationnels(-1,-2);
     Rationnels testu= Rationnels(16,25);
     Rationnels testi = Rationnels(1,1);
-    Rationnels test = Rationnels(1,3);
+    //Rationnels test = Rationnels(1,3);
     std::cout<<std::endl;
     std::cout<<"testi : "<<testi;
     std::cout<<"testo : "<<testo;
@@ -38,12 +38,19 @@ int main(){
     std::cout<<"ratio x float "<< testo.Ratio_virgule_flottante(0.5) <<std::endl;
     std::cout<<"float x ratio "<< testo.virgule_flottante_Ratio(0.5) <<std::endl;
     std::cout<<"float to ratio "<< testa.getRationnel(0.5,50) <<std::endl;
-    std::cout<<"logarithme "<<Rationnels(1,3).logarithme()<<std::endl;
+    //std::cout<<"logarithme "<<Rationnels(1,3).logarithme()<<std::endl;
     std::cout<<"racine  "<<testu.squareRoot()<<std::endl;
     //std::cout<<"cosinus "<<teste.cosinus()<<std::endl;
     std::cout<<"absolue "<<teste.absolue()<<std::endl;
     std::cout<<"exponentielle "<<testi.exponentielle()<<std::endl;
 
-
+    try{
+        Rationnels div_zero = Rationnels(1,0);
+        std::cout<<div_zero<<std::endl;
+    }
+    catch(std::exception &e){
+        std::cout<<e.what()<<std::endl;
+    }
+    
     return 0;
 }
