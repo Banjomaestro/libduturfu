@@ -20,13 +20,97 @@ TEST (RationnelsConstructor, basicConstructor) {
 
 	for(int i = 1; i<vectorSize; i++){
 		ratio = Rationnels(testers[i],testers[vectorSize-i]);
-		std::cout << ratio;
 		const long gcd = std::__algo_gcd(testers[i],testers[vectorSize-i]);
 		ASSERT_EQ (testers[i]/gcd,ratio.numerator);
 		ASSERT_EQ (testers[vectorSize-i]/gcd,ratio.denominator);
 	}
 }
-/*
+
+TEST (RationnelsConstructor, floatConstructor) { 
+
+	std::vector<double> testers = {12,4545.6,545454.67,343432.6,1.545674,3.567897654,5678.7654322,4.566778,-56565.76768,-0.6565657,-678.0657575, 168.0854};
+	Rationnels ratio;
+
+	for(int i = 0; i<testers.size(); i++){
+		ratio = Rationnels(testers[i]);
+
+		ASSERT_NEAR (testers[i], ((float) ratio.numerator/ratio.denominator),0.9);
+	}
+	
+}
+
+TEST (add, addTest){
+
+	std::vector<double> testers = {12,4545.6,545454.67,343432.6,1.545674,3.567897654,5678.7654322,4.566778,-56565.76768,-0.6565657,-678.0657575, 168.0854};
+	Rationnels ratio;
+
+
+	for(int i = 0; i<testers.size(); i++){
+		ratio = Rationnels(testers[i])+Rationnels(testers[testers.size()-i]);
+		float val = testers[i]+testers[testers.size()-i];
+		std::cout<<"passed "<<std::endl;
+		std::cout<<Rationnels(testers[i])<<std::endl<<Rationnels(testers[testers.size()-i])<<std::endl;
+		std::cout<<testers[i]<<std::endl<<testers[testers.size()-i]<<std::endl;
+
+		ASSERT_NEAR (val, ((float) ratio.numerator/ratio.denominator),1);
+	}
+}
+
+
+TEST (sub, subTest){
+
+	double vectorSize = 50;
+	std::vector<double> testers(vectorSize);
+
+	std::generate(testers.begin(), testers.end(),[n = 1] () mutable { return (static_cast <float> (rand()) / static_cast <float> (RAND_MAX))*100; });
+	Rationnels ratio;
+
+
+	for(int i = 0; i<vectorSize; i++){
+		ratio = Rationnels(testers[i])-Rationnels(testers[vectorSize-i]);
+		float val = testers[i]-testers[vectorSize-i];
+
+		ASSERT_NEAR (val, ((float) ratio.numerator/ratio.denominator),0.001);
+	}
+}
+
+TEST (multiply, multiplyTest){
+
+	double vectorSize = 50;
+	std::vector<double> testers(vectorSize);
+
+	std::generate(testers.begin(), testers.end(),[n = 1] () mutable { return (static_cast <float> (rand()) / static_cast <float> (RAND_MAX))*100; });
+	Rationnels ratio;
+
+
+	for(int i = 0; i<vectorSize; i++){
+		ratio = Rationnels(testers[i])*Rationnels(testers[vectorSize-i]);
+		float val = testers[i]*testers[vectorSize-i];
+
+		ASSERT_NEAR (val, ((float) ratio.numerator/ratio.denominator),0.001);
+	}
+}
+
+TEST (divide, divideTest){
+
+	double vectorSize = 50;
+	std::vector<double> testers(vectorSize);
+
+	std::generate(testers.begin(), testers.end(),[n = 1] () mutable { return (static_cast <float> (rand()) / static_cast <float> (RAND_MAX))*100; });
+	Rationnels ratio;
+
+
+	for(int i = 0; i<vectorSize; i++){
+		ratio = Rationnels(testers[i])/Rationnels(testers[vectorSize-i]);
+		float val = testers[i]/testers[vectorSize-i];
+
+		ASSERT_NEAR (val, ((float) ratio.numerator/ratio.denominator),0.001);
+	}
+}
+
+
+
+
 TEST (reverse, reverseTest){
 
 	int vectorSize = 50;
@@ -41,16 +125,79 @@ TEST (reverse, reverseTest){
 		ASSERT_EQ (testers[vectorSize-i],ratio.numerator);
 	}
 }
-/*
-TEST (RationnelsConstructor, floatConstructor) { 
-	Rationnels ratio = Rationnels(0.3);
-    Rationnels ratio2 = Rationnels(0.5);
 
-	ASSERT_NEAR (0.3, ((float) ratio.numerator/ratio.denominator),0.1);
-	//ASSERT_EQ (0.5,(ratio2.numerator/ratio2.denominator));
-	
+/*
+TEST (add, addTest){
+
+	double vectorSize = 50;
+	std::vector<double> testers(vectorSize);
+
+	std::generate(testers.begin(), testers.end(),[n = 1] () mutable { return (static_cast <float> (rand()) / static_cast <float> (RAND_MAX))*100; });
+	Rationnels ratio;
+
+
+	for(int i = 0; i<vectorSize; i++){
+		ratio = Rationnels(testers[i])+Rationnels(testers[vectorSize-i]);
+		float val = testers[i]+testers[vectorSize-i];
+
+		ASSERT_NEAR (val, ((float) ratio.numerator/ratio.denominator),0.001);
+	}
 }
 
+/*
+TEST (sub, subTest){
+
+	double vectorSize = 50;
+	std::vector<double> testers(vectorSize);
+
+	std::generate(testers.begin(), testers.end(),[n = 1] () mutable { return (static_cast <float> (rand()) / static_cast <float> (RAND_MAX))*100; });
+	Rationnels ratio;
+
+
+	for(int i = 0; i<vectorSize; i++){
+		ratio = Rationnels(testers[i])-Rationnels(testers[vectorSize-i]);
+		float val = testers[i]-testers[vectorSize-i];
+
+		ASSERT_NEAR (val, ((float) ratio.numerator/ratio.denominator),0.001);
+	}
+}
+
+TEST (multiply, multiplyTest){
+
+	double vectorSize = 50;
+	std::vector<double> testers(vectorSize);
+
+	std::generate(testers.begin(), testers.end(),[n = 1] () mutable { return (static_cast <float> (rand()) / static_cast <float> (RAND_MAX))*100; });
+	Rationnels ratio;
+
+
+	for(int i = 0; i<vectorSize; i++){
+		ratio = Rationnels(testers[i])*Rationnels(testers[vectorSize-i]);
+		float val = testers[i]*testers[vectorSize-i];
+
+		ASSERT_NEAR (val, ((float) ratio.numerator/ratio.denominator),0.001);
+	}
+}
+
+TEST (divide, divideTest){
+
+	double vectorSize = 50;
+	std::vector<double> testers(vectorSize);
+
+	std::generate(testers.begin(), testers.end(),[n = 1] () mutable { return (static_cast <float> (rand()) / static_cast <float> (RAND_MAX))*100; });
+	Rationnels ratio;
+
+
+	for(int i = 0; i<vectorSize; i++){
+		ratio = Rationnels(testers[i])/Rationnels(testers[vectorSize-i]);
+		float val = testers[i]/testers[vectorSize-i];
+
+		ASSERT_NEAR (val, ((float) ratio.numerator/ratio.denominator),0.001);
+	}
+}
+
+
+v
 
 /*
 TEST (VectorDConstructor, copyConstructor) { 

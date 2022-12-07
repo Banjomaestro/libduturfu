@@ -1,6 +1,6 @@
 INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o: \
-  /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/src/Rationnels.cpp \
-  /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/src/../include/Rationnels.hpp \
+  /Users/mac/Documents/lessons/imac/second\ year/first\ semester/libduturfu/Rationnels/src/Rationnels.cpp \
+  /Users/mac/Documents/lessons/imac/second\ year/first\ semester/libduturfu/Rationnels/src/../include/Rationnels.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__config_site \

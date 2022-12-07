@@ -22,6 +22,7 @@ int main(){
     std::cout<<"testo+testo : "<<testo+testo;
     std::cout<<"testo-testo : "<<testo-testo;
     std::cout<<"testo-ratio : "<<testo-Rationnels(1,4);
+    std::cout<<"testo-ratio fjkdhfjdksf : "<<Rationnels(1.75561);
     std::cout<<"-testo : "<<-testo;
     std::cout<<"testo/testo : "<<testo/testo;
 
@@ -37,7 +38,7 @@ int main(){
     std::cout<<"ratio x float "<< testo.Ratio_virgule_flottante(0.5) <<std::endl;
     std::cout<<"float x ratio "<< testo.virgule_flottante_Ratio(0.5) <<std::endl;
     std::cout<<"float to ratio "<< testa.getRationnel(0.5,50) <<std::endl;
-    std::cout<<"logarithme "<<test.logarithme()<<std::endl;
+    std::cout<<"logarithme "<<Rationnels(1,3).logarithme()<<std::endl;
     std::cout<<"racine  "<<testu.squareRoot()<<std::endl;
     //std::cout<<"cosinus "<<teste.cosinus()<<std::endl;
     std::cout<<"absolue "<<teste.absolue()<<std::endl;

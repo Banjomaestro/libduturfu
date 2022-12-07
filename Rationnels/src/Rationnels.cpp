@@ -1,6 +1,6 @@
 #include "../include/Rationnels.hpp"
 
-Rationnels ::Rationnels(int nume, int deno){
+Rationnels ::Rationnels(long nume, long deno){
 
     const long gcd = std::__algo_gcd(nume,deno);
     numerator = nume/gcd;
@@ -17,7 +17,7 @@ Rationnels ::Rationnels(){
 
 Rationnels ::Rationnels(float ratio){
 
-    *this = getRationnel(ratio,50);
+    *this = getRationnel(ratio,100);
 }
 
 
@@ -32,7 +32,7 @@ Rationnels Rationnels::operator+(const Rationnels rationnel){
         return *this;
     }
 
-
+    
     return Rationnels((numerator*rationnel.denominator + denominator*rationnel.numerator),denominator*rationnel.denominator);
 }
 
@@ -172,19 +172,26 @@ Rationnels Rationnels::power(float n){
     return getRationnel(pow(numerator,n),pow(denominator, n));
 }
 
-
 Rationnels Rationnels::getRationnel(float ratio, int iterations){
-    if(ratio == 0 || iterations ==0){
-        return Rationnels(0,1);
+
+    Rationnels toReturn;
+
+    if((ratio == 0) || iterations ==0){
+        toReturn = Rationnels(0,1);
     }else if(ratio<1){
-        Rationnels toReturn = getRationnel(1/ratio, iterations);
+        toReturn = getRationnel(1/ratio, iterations);
         toReturn.reverse();
-        return toReturn;
     }else if(ratio>=1){
         int whole = floor(ratio);
-        return Rationnels(whole,1)+getRationnel(ratio-whole,iterations-1);
+        toReturn = Rationnels(whole,1)+getRationnel(ratio-whole,iterations-1);
     }
+
+    if(ratio<0){
+        return -toReturn;
+    }else
+        return toReturn;
 }
+
 
 Rationnels Rationnels::reverse(){
     int temp = denominator;
@@ -214,7 +221,7 @@ Rationnels Rationnels::logarithme() {
         return 0;
     }
 
-    return Rationnels(log(numerator)-log(denominator),1);
+    return Rationnels(log(numerator)-log(denominator));
 }
 
 Rationnels Rationnels::cosinus() {

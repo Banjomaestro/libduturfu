@@ -13,7 +13,7 @@ class Rationnels {
         int denominator;
         Rationnels();
         Rationnels(float ratio);
-        Rationnels(int nume, int deno);
+        Rationnels(long nume, long deno);
         Rationnels reverse();
         Rationnels operator+(const Rationnels rationnel);
         Rationnels operator*(const Rationnels rationnel);
@@ -30,6 +30,7 @@ class Rationnels {
         Rationnels squareRoot();
         Rationnels power(float n);
         Rationnels getRationnel(float ratio, int iterations);
+        Rationnels getRationnelMinus(float ratio, int iterations);
         Rationnels exponentielle();
         Rationnels logarithme();
         Rationnels cosinus();
