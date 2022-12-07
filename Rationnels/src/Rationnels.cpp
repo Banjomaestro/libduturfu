@@ -5,7 +5,7 @@ Rationnels ::Rationnels(long nume, long deno){
     if (denominator==0){
         throw std::domain_error("divide by zero");
     }
-    
+
     const long gcd = std::__algo_gcd(nume,deno);
     numerator = nume/gcd;
     denominator = deno/gcd;
@@ -39,8 +39,11 @@ Rationnels Rationnels::operator+(const Rationnels rationnel){
         return *this;
     }
 
-    
-    return Rationnels((numerator*rationnel.denominator + denominator*rationnel.numerator),denominator*rationnel.denominator);
+    const long gcd = std::__algo_gcd(rationnel.denominator,denominator);
+    int newRatioDeno = rationnel.denominator/gcd;
+    int newDeno = denominator/gcd;
+
+    return Rationnels((numerator*newRatioDeno + newDeno*rationnel.numerator),newDeno*rationnel.denominator);
 }
 
 
@@ -185,10 +188,10 @@ Rationnels Rationnels::getRationnel(float ratio, int iterations){
 
     if((ratio == 0) || iterations ==0){
         toReturn = Rationnels(0,1);
-    }else if(ratio<1){
+    }else if(abs(ratio)<1){
         toReturn = getRationnel(1/ratio, iterations);
         toReturn.reverse();
-    }else if(ratio>=1){
+    }else{
         int whole = floor(ratio);
         toReturn = Rationnels(whole,1)+getRationnel(ratio-whole,iterations-1);
     }
