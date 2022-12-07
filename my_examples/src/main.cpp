@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <iostream>
 #include "Rationnels.hpp"
-#include "Operations.hpp"
 
 int main(){
     std::cout << "lul" <<std::endl;
