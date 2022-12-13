@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE",
+  "command": "/usr/bin/clang++  -I/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/include -I/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -Wall -Wextra -Wpedantic -pedantic-errors -std=gnu++11 -o CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o -c /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/src/Rationnels.cpp",
+  "file": "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/src/Rationnels.cpp"
+},
+{
+  "directory": "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE/UnitTest",
+  "command": "/usr/bin/clang++  -I/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/include -isystem /usr/local/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/UnitTest.dir/src/test.cpp.o -c /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/UnitTest/src/test.cpp",
+  "file": "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/UnitTest/src/test.cpp"
+},
+{
+  "directory": "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/my_examples",
+  "command": "/usr/bin/clang++  -I/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -Wall -Wextra -Wpedantic -pedantic-errors -std=gnu++11 -o CMakeFiles/main.dir/src/main.cpp.o -c /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/my_examples/src/main.cpp",
+  "file": "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/my_examples/src/main.cpp"
+}
+]

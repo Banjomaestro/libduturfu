@@ -1,0 +1,178 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "INTERFACE",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-INTERFACE-Debug-ed731ea9db20d849a94f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "Rationnels",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "INTERFACE/doc",
+					"jsonFile" : "directory-INTERFACE.doc-Debug-8def5207e8bb0bea9cf6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "Rationnels/doc",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "INTERFACE/UnitTest",
+					"jsonFile" : "directory-INTERFACE.UnitTest-Debug-b95acd743cb8025d2e06.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "Rationnels/UnitTest",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "my_examples",
+					"jsonFile" : "directory-my_examples-Debug-007ac5879ef561744ee9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "my_examples",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "myCmakeTest"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"name" : "Rationnels",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "examples",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Rationnels::@8f2e06132bc3ad500312",
+					"jsonFile" : "target-Rationnels-Debug-ad4a822c2b6b1f43dea2.json",
+					"name" : "Rationnels",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "UnitTest::@03491e7b0159c6faa5e9",
+					"jsonFile" : "target-UnitTest-Debug-b953a6277ba25f2fad1d.json",
+					"name" : "UnitTest",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "html::@823755c9640417a52d4c",
+					"jsonFile" : "target-html-Debug-2baf1b22a57f2d45a47d.json",
+					"name" : "html",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "main::@fa10e824bd3b8fa604e3",
+					"jsonFile" : "target-main-Debug-1c239a36d3b86c42ea28.json",
+					"name" : "main",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build",
+		"source" : "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

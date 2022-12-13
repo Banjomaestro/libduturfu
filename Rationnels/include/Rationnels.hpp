@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <algorithm>
 #include <stdexcept>
+#include <cassert>
 
 class Rationnels {
         

@@ -1,0 +1,5 @@
+if(EXISTS "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE/UnitTest/UnitTest[1]_tests.cmake")
+  include("/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE/UnitTest/UnitTest[1]_tests.cmake")
+else()
+  add_test(UnitTest_NOT_BUILT UnitTest_NOT_BUILT)
+endif()
