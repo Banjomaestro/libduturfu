@@ -5,7 +5,8 @@
 int main(){
     std::cout << "lul" <<std::endl;
     //Operations test;
-    Rationnels testo = Rationnels(1,3);
+    Rationnels testo = Rationnels(1,6);
+    Rationnels testo1 = Rationnels(3,9);
     Rationnels testa;
     Rationnels teste= Rationnels(-1,-2);
     Rationnels testu= Rationnels(16,25);
@@ -18,7 +19,8 @@ int main(){
     std::cout<<"testo "<<testo;
     //Rationnels<int> test1 = Rationnels<int>(2,3);
     std::cout<<"testo*testo : "<<testo*testo;
-    std::cout<<"testo+testo : "<<testo+testo;
+    std::cout<<"testo/testo1 : "<<testo/testo1;
+    std::cout<<"testo+testo : "<<testo1+testo;
     std::cout<<"testo-testo : "<<testo-testo;
     std::cout<<"testo-ratio : "<<testo-Rationnels(1,4);
     std::cout<<"testo-ratio fjkdhfjdksf : "<<Rationnels(1.75561);

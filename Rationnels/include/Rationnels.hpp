@@ -10,8 +10,8 @@
 class Rationnels {
         
     public:
-        int numerator;
-        int denominator;
+        long long numerator;
+        long long denominator;
         Rationnels();
         Rationnels(float ratio);
         Rationnels(long nume, long deno);

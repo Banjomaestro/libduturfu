@@ -2,13 +2,14 @@
 
 Rationnels ::Rationnels(long nume, long deno){
 
-    if (denominator==0){
-        throw std::domain_error("divide by zero");
+    if(deno==0){
+        
     }
 
     const long gcd = std::__algo_gcd(nume,deno);
-    numerator = nume/gcd;
-    denominator = deno/gcd;
+ 
+    this->numerator = nume/gcd;
+    this->denominator = deno/gcd;
 
 
 }
@@ -23,7 +24,7 @@ Rationnels ::Rationnels(){
 
 Rationnels ::Rationnels(float ratio){
 
-    *this = getRationnel(ratio,100);
+    *this = getRationnel(ratio,10);
 
 }
 
@@ -40,8 +41,8 @@ Rationnels Rationnels::operator+(const Rationnels rationnel){
     }
 
     const long gcd = std::__algo_gcd(rationnel.denominator,denominator);
-    int newRatioDeno = rationnel.denominator/gcd;
-    int newDeno = denominator/gcd;
+    long newRatioDeno = rationnel.denominator/gcd;
+    long newDeno = denominator/gcd;
 
     return Rationnels((numerator*newRatioDeno + newDeno*rationnel.numerator),newDeno*rationnel.denominator);
 }
@@ -71,15 +72,14 @@ Rationnels Rationnels::operator!(){
 
 Rationnels Rationnels::operator/(const Rationnels rationnel){
 
-    if (numerator==0||rationnel.denominator==0 ){
+    if (this->numerator==0 ){
         return 0;
     }
 
-    else if (rationnel.numerator/rationnel.denominator==numerator/denominator){
-        return 1;
-    }
+    Rationnels temp = rationnel;
+    temp.reverse();
 
-    return Rationnels(numerator*rationnel.denominator,denominator*rationnel.numerator);
+    return *this*temp;
 }
 
 Rationnels Rationnels::operator-(const Rationnels rationnel){
@@ -87,7 +87,12 @@ Rationnels Rationnels::operator-(const Rationnels rationnel){
     if (rationnel.numerator/rationnel.denominator==numerator/denominator){
         return 0;
     }
-    return Rationnels((numerator*rationnel.denominator - denominator*rationnel.numerator),denominator*rationnel.denominator);
+
+    const long gcd = std::__algo_gcd(rationnel.denominator,denominator);
+    int newRatioDeno = rationnel.denominator/gcd;
+    int newDeno = denominator/gcd;
+
+    return Rationnels((numerator*newRatioDeno - newDeno*rationnel.numerator),newDeno*rationnel.denominator);
 
 }
 
@@ -196,33 +201,17 @@ Rationnels Rationnels::getRationnel(float ratio, int iterations){
         toReturn = Rationnels(whole,1)+getRationnel(ratio-whole,iterations-1);
     }
 
-    if(ratio<0){
-        return -toReturn;
-    }else
-        return toReturn;
+    return toReturn;
 }
 
-
 Rationnels Rationnels::reverse(){
-    int temp = denominator;
-    this->denominator = numerator;
+    long long temp = denominator;
+    this->denominator = this->numerator;
     this->numerator = temp;
 }
 
-
 Rationnels Rationnels::exponentielle() {
-    
-    // int k = R.denominator*log(2) - log(2)/2;
-    // Rationnels r = (R.numerator-k*log(2)*R.denominator)/R.denominator;
- 
-    // return Rationnels(exponentielle(r)*pow(2,k));
-
-    float result=1/1;
-    int nbiter=12;
-    for(unsigned int n=nbiter; n>=1; n--){
-        result=1+ (numerator/(n*denominator)) *result;
-    }
-    return getRationnel(result,50);
+    return Rationnels(exp((float) numerator/denominator));
 }
 
 
