@@ -86,6 +86,14 @@ int main(){
         std::cout<<e.what()<<std::endl;
     }
 
+    try{
+        Rationnels log_neg = Rationnels(1,-1).logarithme();
+        std::cout<<log_neg<<std::endl;
+    }
+    catch(std::exception &e){
+        std::cout<<e.what()<<std::endl;
+    }
+
     
 
 

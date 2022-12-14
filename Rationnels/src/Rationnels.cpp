@@ -169,6 +169,10 @@ Rationnels Rationnels::squareRoot(){
         return 0;
     }
 
+    if (numerator==1 && denominator==1){
+        return 1;
+    }
+
     return Rationnels(sqrt(numerator),sqrt(denominator));
 }
 
@@ -241,7 +245,11 @@ Rationnels Rationnels::logarithme() {
        throw std::domain_error("Impossible de faire logarithme de zéro");
     }
 
-    assert (() && "impossible de calculer le logarithme de quelque chose de négatif");
+    //assert (() && "impossible de calculer le logarithme de quelque chose de négatif");
+
+    if (numerator<0 || denominator<0){
+       throw std::domain_error("le logarithme d'un nombre négatif n'existe pas");
+    }
 
     return Rationnels(log(numerator)-log(denominator));
 }
