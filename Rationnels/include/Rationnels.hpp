@@ -38,9 +38,9 @@ class Rationnels {
         Rationnels sinus();
         Rationnels tangente();
         Rationnels absolue();
-        int partie_entiere();
-        Rationnels virgule_flottante_Ratio(float F);
-        Rationnels Ratio_virgule_flottante(float F);
+        int whole();
+        Rationnels floatProduct(float F);
+        Rationnels floatDivide(float F);
         
         
 };

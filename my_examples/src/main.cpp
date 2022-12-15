@@ -33,11 +33,11 @@ int main(){
     // std::cout<<deRatio.numerator<<std::endl;
     // std::cout<<deRatio.denominator<<std::endl;
 
-    std::cout<<"partie entière "<<testo.partie_entiere()<<std::endl;
+    std::cout<<"partie entière "<<testo.whole()<<std::endl;
     std::cout<<"puissance "<<testo.power(2)<<std::endl;
     std::cout<<"reverse "<< !testo <<std::endl;
-    std::cout<<"ratio x float "<< testo.Ratio_virgule_flottante(0.5) <<std::endl;
-    std::cout<<"float x ratio "<< testo.virgule_flottante_Ratio(0.5) <<std::endl;
+    std::cout<<"ratio x float "<< testo.floatProduct(0.5) <<std::endl;
+    std::cout<<"float x ratio "<< testo.floatDivide(0.5) <<std::endl;
     std::cout<<"float to ratio "<< testa.getRationnel(0.5,50) <<std::endl;
     //std::cout<<"logarithme "<<Rationnels(1,3).logarithme()<<std::endl;
     std::cout<<"racine  "<<testu.squareRoot()<<std::endl;
