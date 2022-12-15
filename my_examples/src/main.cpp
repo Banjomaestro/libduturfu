@@ -8,10 +8,13 @@ int main(){
     //Operations test;
 
 //Rationnels
-    Rationnels testo = Rationnels(1,3);
+    //Rationnels testo = Rationnels(1,3);
     Rationnels testa = Rationnels(0,3);
     Rationnels testaa = Rationnels(0,2);
+    Rationnels testo = Rationnels(1,6);
+    Rationnels testo1 = Rationnels(3,9);
     Rationnels teste= Rationnels(-1,-2);
+    Rationnels testii= Rationnels(5,-2);
     Rationnels testu= Rationnels(16,25);
     Rationnels testi = Rationnels(1,1);
     Rationnels test = Rationnels(M_PI,2);
@@ -23,7 +26,8 @@ int main(){
 
 //Opérations
     std::cout<<"testo*testo : "<<testo*testo;
-    std::cout<<"testo+testo : "<<testo+testo;
+    std::cout<<"testo/testo1 : "<<testo/testo1;
+    std::cout<<"testo+testo : "<<testo1+testo;
     std::cout<<"testo-testo : "<<testo-testo;
     std::cout<<"testo-ratio : "<<testo-Rationnels(1,4);
     std::cout<<"testo-ratio : "<<Rationnels(1.75561);
@@ -31,7 +35,7 @@ int main(){
     std::cout<<"testo/testo : "<<testo/testo;
 
 //fonctions
-    std::cout<<"partie entière "<<testo.partie_entiere()<<std::endl;
+    std::cout<<"partie entière "<<testii.partie_entiere()<<std::endl;
     std::cout<<"puissance "<<testo.power(0)<<std::endl;
     std::cout<<"reverse "<< !testo <<std::endl;
     std::cout<<"ratio x float "<< testo.Ratio_virgule_flottante(0.5) <<std::endl;
