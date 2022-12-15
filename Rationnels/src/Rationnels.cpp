@@ -24,8 +24,12 @@ Rationnels ::Rationnels(){
 
 Rationnels ::Rationnels(float ratio){
 
-    *this = getRationnel(ratio,10);
-
+    Rationnels current = getRationnel(ratio,10);
+    if(current.denominator<0){
+        current.numerator = -current.numerator;
+        current.denominator = -current.denominator;
+    }
+    *this = current;
 }
 
 
@@ -251,7 +255,7 @@ Rationnels Rationnels::cosinus(){
 
     float k = double(numerator)/double(denominator);
 
-    return getRationnel(cos(k),50);
+    return Rationnels(cos(k));
 }
 
 Rationnels Rationnels::sinus() {
@@ -261,7 +265,7 @@ Rationnels Rationnels::sinus() {
 
     float k = double(numerator)/double(denominator);
 
-    return getRationnel(sin(k),50);
+    return Rationnels(sin(k));
 }
 
 Rationnels Rationnels::tangente() {
@@ -278,7 +282,7 @@ Rationnels Rationnels::tangente() {
 
     
 
-    return getRationnel(tan(k),50);
+    return Rationnels(tan(k));
 }
 
 
@@ -306,25 +310,20 @@ Rationnels Rationnels::absolue(){
     
 }
 
-int Rationnels::partie_entiere(){
-    
+int Rationnels::whole(){
     int k = numerator/denominator;
 
     return k;
 }
 
-Rationnels Rationnels::virgule_flottante_Ratio(float F){
+Rationnels Rationnels::floatProduct(float F){
 
-    Rationnels R = F*numerator/denominator;
-
-    return R;
+    return *this * Rationnels(F);
 
 
 }
 
-Rationnels Rationnels::Ratio_virgule_flottante(float F){
+Rationnels Rationnels::floatDivide(float F){
 
-    Rationnels R = numerator*F/denominator;
-
-    return R;
+    return *this / Rationnels(F);
 }
