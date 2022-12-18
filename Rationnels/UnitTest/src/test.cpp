@@ -258,8 +258,8 @@ TEST (power, powerTest){
 	int vectorSize = 100;
 	std::vector<float> testers(vectorSize);
 	std::generate(testers.begin(), testers.end(),[] () { return (((static_cast <float> (rand()) / static_cast <float> (RAND_MAX/2))-100)); });
-	std::vector<double> testersPower(vectorSize);
-	std::generate(testersPower.begin(), testersPower.end(),[] () { return (((static_cast <double> (rand()) / static_cast <double> (RAND_MAX/10))-5)); });
+	std::vector<int> testersPower(vectorSize);
+	std::generate(testersPower.begin(), testersPower.end(),[] () { return (((static_cast <int> (rand()) / static_cast <int> (RAND_MAX/10))-5)); });
 	Rationnels ratio;
 
 	for(int i = 1; i<vectorSize; i++){
@@ -268,3 +268,25 @@ TEST (power, powerTest){
 		ASSERT_NEAR(pow(testers[i],testersPower[i]), ratio.numerator/ratio.denominator,1);
 	}
 }
+
+TEST (boolean, booleanTest){
+
+	int vectorSize = 100;
+	std::vector<float> testers(vectorSize);
+	std::generate(testers.begin(), testers.end(),[] () { return (((static_cast <float> (rand()) / static_cast <float> (RAND_MAX/20))-100)); });
+	std::vector<float> testers2(vectorSize);
+	std::generate(testers2.begin(), testers2.end(),[] () { return (((static_cast <float> (rand()) / static_cast <float> (RAND_MAX/20))-100)); });
+	Rationnels ratio;
+	Rationnels ratio2;
+
+	for(int i = 1; i<vectorSize; i++){
+		ratio = Rationnels(testers[i]);
+		ratio2 = Rationnels(testers2[i]);
+		ASSERT_TRUE((testers[i] >= testers2[i] & ratio >= ratio2 ) || (!(testers[i] >= testers2[i] & ratio >= ratio2 )));
+		ASSERT_TRUE((testers[i] == testers2[i] & ratio == ratio2 ) || (!(testers[i] == testers2[i] & ratio == ratio2 )));
+		ASSERT_TRUE((testers[i] <= testers2[i] & ratio <= ratio2 ) || (!(testers[i] <= testers2[i] & ratio <= ratio2 )));
+		ASSERT_TRUE((testers[i] > testers2[i] & ratio > ratio2 ) || (!(testers[i] > testers2[i] & ratio > ratio2 )));
+		ASSERT_TRUE((testers[i] < testers2[i] & ratio < ratio2 ) || (!(testers[i] < testers2[i] & ratio < ratio2 )));
+	}
+}
+
