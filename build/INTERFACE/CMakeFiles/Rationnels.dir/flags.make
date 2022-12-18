@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I"/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels/include" -I"/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/include"
 
-CXX_FLAGS =  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -Wall -Wextra -Wpedantic -pedantic-errors -std=gnu++11
+CXX_FLAGS =  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -Wall -Wextra -Wpedantic -pedantic-errors -std=gnu++11
 

@@ -2,8 +2,8 @@
 
 Rationnels ::Rationnels(long nume, long deno){
 
-    if(deno==0){
-        
+    if (deno==0){
+        throw std::domain_error("divide by zero");
     }
 
     const long gcd = std::__algo_gcd(nume,deno);
@@ -40,7 +40,7 @@ Rationnels ::Rationnels(float ratio){
 
 
 
-Rationnels Rationnels::operator+(const Rationnels rationnel){
+Rationnels Rationnels::operator+(const Rationnels rationnel) const{
 
     if (numerator==0){
         return rationnel;
@@ -60,7 +60,7 @@ Rationnels Rationnels::operator+(const Rationnels rationnel){
 
 
 
-Rationnels Rationnels::operator*(const Rationnels rationnel){
+Rationnels Rationnels::operator*(const Rationnels rationnel) const{
 
     if (numerator==0||rationnel.numerator==0 ){
         return 0;
@@ -70,7 +70,11 @@ Rationnels Rationnels::operator*(const Rationnels rationnel){
 }
 
 
-Rationnels Rationnels::operator!(){
+Rationnels Rationnels::operator!() const{
+
+    if (numerator==0){
+        throw std::domain_error("divide by zero");
+    }
 
     if (numerator==0){
         return 0;
@@ -80,7 +84,7 @@ Rationnels Rationnels::operator!(){
 }
 
 
-Rationnels Rationnels::operator/(const Rationnels rationnel){
+Rationnels Rationnels::operator/(const Rationnels rationnel) const{
 
     if (this->numerator==0 ){
         return 0;
@@ -92,7 +96,7 @@ Rationnels Rationnels::operator/(const Rationnels rationnel){
     return *this*temp;
 }
 
-Rationnels Rationnels::operator-(const Rationnels rationnel){
+Rationnels Rationnels::operator-(const Rationnels rationnel) const{
 
     if (rationnel.numerator/rationnel.denominator==numerator/denominator){
         return 0;
@@ -106,7 +110,7 @@ Rationnels Rationnels::operator-(const Rationnels rationnel){
 
 }
 
-Rationnels Rationnels::operator-(){
+Rationnels Rationnels::operator-() const{
     return Rationnels(-this->numerator,this->denominator);    
 }
 
@@ -176,8 +180,16 @@ bool Rationnels::operator>(Rationnels R){
 
 Rationnels Rationnels::squareRoot(){
 
+    if (numerator<0 || denominator<0){
+        throw std::domain_error("you can't do the square root of a negative number");
+    }
+
     if (numerator==0){
         return 0;
+    }
+
+    if (numerator==1 && denominator==1){
+        return 1;
     }
 
     return Rationnels(sqrt(numerator),sqrt(denominator));
@@ -194,7 +206,8 @@ Rationnels Rationnels::power(float n){
         return 1;
     }
 
-    return getRationnel(pow(numerator,n),pow(denominator, n));
+    return Rationnels(pow(numerator,n),pow(denominator, n));
+
 }
 
 Rationnels Rationnels::getRationnel(float ratio, int iterations){
@@ -215,6 +228,11 @@ Rationnels Rationnels::getRationnel(float ratio, int iterations){
 }
 
 Rationnels Rationnels::reverse(){
+
+    if (numerator==0){
+        throw std::domain_error("divide by zero");
+    }
+
     long long temp = denominator;
     this->denominator = this->numerator;
     this->numerator = temp;
@@ -229,18 +247,25 @@ Rationnels Rationnels::exponentielle() {
 
 Rationnels Rationnels::logarithme() {
     if (numerator==0 || denominator==0){
-        return 0;
+       throw std::domain_error("Impossible to do the logaritme of zero");
+    }
+
+    //assert (() && "impossible de calculer le logarithme de quelque chose de négatif");
+
+    if (numerator<0 || denominator<0){
+       throw std::domain_error("the logarithm of a negative number doesn't exist");
     }
 
     return Rationnels(log(numerator)-log(denominator));
 }
 
-Rationnels Rationnels::cosinus() {
+
+Rationnels Rationnels::cosinus(){
     if (numerator==0){
         return 1;
     }
 
-    float k = numerator/denominator;
+    float k = double(numerator)/double(denominator);
 
     return Rationnels(cos(k));
 }
@@ -250,17 +275,24 @@ Rationnels Rationnels::sinus() {
         return 0;
     }
 
-    float k = numerator/denominator;
+    float k = double(numerator)/double(denominator);
 
     return Rationnels(sin(k));
 }
 
 Rationnels Rationnels::tangente() {
+    
+    if (3.14<=numerator<=3.15 && denominator==2){
+        throw std::domain_error("tan(pi/2) doesn't exist");
+    }
+
     if (numerator==0){
         return 0;
     }
 
-    float k = numerator/denominator;
+    float k = double(numerator)/double(denominator);
+
+    
 
     return Rationnels(tan(k));
 }
@@ -275,6 +307,7 @@ std::ostream& operator<< (std::ostream& stream, const Rationnels& v){
 
 Rationnels Rationnels::absolue(){
 
+
     if (numerator<0){
         return Rationnels(-numerator,denominator);
     }
@@ -286,6 +319,7 @@ Rationnels Rationnels::absolue(){
     else{
         return Rationnels(numerator,denominator);
     }
+    
 }
 
 int Rationnels::whole(){
@@ -297,6 +331,7 @@ int Rationnels::whole(){
 Rationnels Rationnels::floatProduct(float F){
 
     return *this * Rationnels(F);
+
 
 }
 
