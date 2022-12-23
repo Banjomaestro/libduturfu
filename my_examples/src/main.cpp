@@ -8,16 +8,16 @@ int main(){
 
 
 //Rationnels
-    Rationnels test1 = Rationnels(0,3);
-    Rationnels test2 = Rationnels(5,2);
-    Rationnels test3 = Rationnels(1,6);
-    Rationnels test4 = Rationnels(3,9);
-    Rationnels test5= Rationnels(-1,2);
-    Rationnels test6= Rationnels(16,25);
-    Rationnels test7 = Rationnels(1,1);
-    Rationnels test = Rationnels(M_PI,2);
-    Rationnels test8 = Rationnels(M_PI,1);
-    Rationnels test_vide;
+    Rationnels<float> test1 = Rationnels<float>(0,3);
+    Rationnels<float> test2 = Rationnels<float>(5,2);
+    Rationnels<float> test3 = Rationnels<float>(1,6);
+    Rationnels<float> test4 = Rationnels<float>(3,9);
+    Rationnels<float> test5= Rationnels<float>(-1,2);
+    Rationnels<float> test6= Rationnels<float>(16,25);
+    Rationnels<float> test7 = Rationnels<float>(1,1);
+    Rationnels<float> test = Rationnels<float>(M_PI,2);
+    Rationnels<float> test8 = Rationnels<float>(M_PI,1);
+    Rationnels<float> test_vide;
 
 //cout
     std::cout<<std::endl;
@@ -77,7 +77,7 @@ int main(){
     std::cout<<"Float to ratio "<< test_vide.getRationnel(-0.5,50) <<std::endl;
 
 //Logarithme
-    std::cout<<"Logarithme "<<Rationnels(1,3).logarithme()<<std::endl;
+    std::cout<<"Logarithme "<<Rationnels<float>(1,3).logarithme()<<std::endl;
 
 //Squareroot
     std::cout<<"Squareroot test6 "<<test6.squareRoot()<<std::endl;
@@ -95,15 +95,24 @@ int main(){
 
 //exponentielle
     std::cout<<"exponentielle "<<test7.exponentielle()<<std::endl;
+    std::cout<<"exponentielle "<<test1.exponentielle()<<std::endl;
+
+//exponentielle2
+    std::cout<<"exp2 : "<<test1.exponentielle2()<<std::endl;
+    std::cout<<"exp2 : "<<test7.exponentielle2()<<std::endl;
 
 //reverse
+<<<<<<< HEAD
     std::cout<<"reverse "<<!test3;
+=======
+    std::cout<<"reverse "<<test3.reverse()<<std::endl;
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
 
 
 //exceptions
 
     try{
-        Rationnels div_zero = Rationnels(1,0);
+        Rationnels<float> div_zero = Rationnels<float>(1,0);
         std::cout<<div_zero<<std::endl;
     }
     catch(std::exception &e){
@@ -111,7 +120,7 @@ int main(){
     }
 
     try{
-        Rationnels log_zero = Rationnels(0,1).logarithme();
+        Rationnels<float> log_zero = Rationnels<float>(0,1).logarithme();
         std::cout<<log_zero<<std::endl;
     }
     catch(std::exception &e){
@@ -119,7 +128,7 @@ int main(){
     }
 
     try{
-        Rationnels tan_pi2 = Rationnels(0,2).tangente();
+        Rationnels<float> tan_pi2 = Rationnels<float>(M_PI,1).tangente();
         std::cout<<tan_pi2<<std::endl;
     }
     catch(std::exception &e){
@@ -127,7 +136,11 @@ int main(){
     }
 
     try{
+<<<<<<< HEAD
         Rationnels reverse_zero = !test1;
+=======
+        Rationnels<float> reverse_zero = test1.reverse();
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
         std::cout<<reverse_zero<<std::endl;
     }
     catch(std::exception &e){
@@ -135,7 +148,7 @@ int main(){
     }
 
     try{
-        Rationnels inv_zero = !test1;
+        Rationnels<float> inv_zero = !test1;
         std::cout<<inv_zero<<std::endl;
     }
     catch(std::exception &e){
@@ -143,7 +156,7 @@ int main(){
     }
 
     try{
-        Rationnels log_neg = Rationnels(-1,1).logarithme();
+        Rationnels<float> log_neg = Rationnels<float>(-1,1).logarithme();
         std::cout<<log_neg<<std::endl;
     }
     catch(std::exception &e){
@@ -152,7 +165,7 @@ int main(){
 
 
     try{
-        Rationnels squareroot_neg = Rationnels(-1,1).squareRoot();
+        Rationnels<float> squareroot_neg = Rationnels<float>(-1,1).squareRoot();
         std::cout<<squareroot_neg<<std::endl;
     }
     catch(std::exception &e){

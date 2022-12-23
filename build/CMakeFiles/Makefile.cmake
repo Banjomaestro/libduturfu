@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+<<<<<<< HEAD
   "/Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/CMakeLists.txt"
   "/Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/Rationnels/CMakeLists.txt"
   "/Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/Rationnels/UnitTest/CMakeLists.txt"
@@ -16,6 +17,17 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.24.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.24.2/CMakeSystem.cmake"
   "/Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/my_examples/CMakeLists.txt"
+=======
+  "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/CMakeLists.txt"
+  "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/CMakeLists.txt"
+  "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/UnitTest/CMakeLists.txt"
+  "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/doc/CMakeLists.txt"
+  "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/Rationnels/doc/Doxyfile-html.cmake"
+  "CMakeFiles/3.24.2/CMakeCCompiler.cmake"
+  "CMakeFiles/3.24.2/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.24.2/CMakeSystem.cmake"
+  "/Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/my_examples/CMakeLists.txt"
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
   "/usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCCompiler.cmake.in"
   "/usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCCompilerABI.c"
   "/usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCInformation.cmake"

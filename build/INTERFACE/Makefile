@@ -57,10 +57,17 @@ RM = /usr/local/Cellar/cmake/3.24.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build
+=======
+CMAKE_SOURCE_DIR = /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +139,24 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/CMakeFiles /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/INTERFACE//CMakeFiles/progress.marks
 	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/CMakeFiles 0
+=======
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/CMakeFiles /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/INTERFACE//CMakeFiles/progress.marks
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build/CMakeFiles 0
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
 .PHONY : all
 
 # The main clean target
 clean:
+<<<<<<< HEAD
 	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/clean
+=======
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/clean
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +165,38 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
+<<<<<<< HEAD
 	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/preinstall
+=======
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/preinstall
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
+<<<<<<< HEAD
 	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/preinstall
+=======
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/preinstall
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
+<<<<<<< HEAD
 	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+=======
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
 .PHONY : depend
 
 # Convenience name for target.
 INTERFACE/CMakeFiles/Rationnels.dir/rule:
+<<<<<<< HEAD
 	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/CMakeFiles/Rationnels.dir/rule
+=======
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/CMakeFiles/Rationnels.dir/rule
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
 .PHONY : INTERFACE/CMakeFiles/Rationnels.dir/rule
 
 # Convenience name for target.
@@ -172,7 +205,11 @@ Rationnels: INTERFACE/CMakeFiles/Rationnels.dir/rule
 
 # fast build rule for target.
 Rationnels/fast:
+<<<<<<< HEAD
 	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/build
+=======
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/build
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
 .PHONY : Rationnels/fast
 
 src/Rationnels.o: src/Rationnels.cpp.o
@@ -180,7 +217,11 @@ src/Rationnels.o: src/Rationnels.cpp.o
 
 # target to build an object file
 src/Rationnels.cpp.o:
+<<<<<<< HEAD
 	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o
+=======
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
 .PHONY : src/Rationnels.cpp.o
 
 src/Rationnels.i: src/Rationnels.cpp.i
@@ -188,7 +229,11 @@ src/Rationnels.i: src/Rationnels.cpp.i
 
 # target to preprocess a source file
 src/Rationnels.cpp.i:
+<<<<<<< HEAD
 	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.i
+=======
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.i
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
 .PHONY : src/Rationnels.cpp.i
 
 src/Rationnels.s: src/Rationnels.cpp.s
@@ -196,7 +241,11 @@ src/Rationnels.s: src/Rationnels.cpp.s
 
 # target to generate assembly for a file
 src/Rationnels.cpp.s:
+<<<<<<< HEAD
 	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.s
+=======
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.s
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
 .PHONY : src/Rationnels.cpp.s
 
 # Help Target
@@ -226,6 +275,10 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+<<<<<<< HEAD
 	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+=======
+	cd /Users/keziahapaloo-kingslove/Documents/IMAC/Semestre_3/Projet_info_maths/libduturfu/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+>>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
 .PHONY : cmake_check_build_system
 
