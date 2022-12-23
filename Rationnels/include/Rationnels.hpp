@@ -223,7 +223,12 @@ Rationnels<T> ::Rationnels(float ratio){
         current.numerator = -current.numerator;
         current.denominator = -current.denominator;
     }
+
     *this = current;
+    
+    const long gcd = std::__algo_gcd(this->numerator,this->denominator);
+    this->numerator /= gcd;
+    this->denominator /= gcd;
 }
 
 
@@ -435,6 +440,8 @@ Rationnels<T> Rationnels<T>::reverse(){
     long long temp = denominator;
     this->denominator = this->numerator;
     this->numerator = temp;
+
+    return *this;
 }
 
 template <typename T>
