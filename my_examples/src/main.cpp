@@ -14,8 +14,8 @@ int main(){
     Rationnels<int> test5= Rationnels<int>(-1,2);
     Rationnels<int> test6= Rationnels<int>(16,25);
     Rationnels<int> test7 = Rationnels<int>(1,1);
-    Rationnels<int> test = Rationnels<int>(M_PI,2);
-    Rationnels<int> test8 = Rationnels<int>(M_PI,1);
+    Rationnels<int> test = Rationnels<int>(314,200);
+    Rationnels<int> test8 = Rationnels<int>(314,100);
     Rationnels<int> test_vide;
 
 //cout
@@ -122,7 +122,7 @@ int main(){
     }
 
     try{
-        Rationnels<int> tan_pi2 = Rationnels<int>(M_PI,1).tangente();
+        Rationnels<int> tan_pi2 = Rationnels<int>(314,100).tangente();
         std::cout<<tan_pi2<<std::endl;
     }
     catch(std::exception &e){

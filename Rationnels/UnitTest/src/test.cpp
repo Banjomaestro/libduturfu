@@ -9,10 +9,6 @@
 
 #include "../../include/Rationnels.hpp"
 
-
-/////////////////////////////////////////////////////
-// constructors
-
 TEST (RationnelsConstructor, basicConstructor) { 
 	int vectorSize = 100;
 	std::vector<int> testers(vectorSize);
@@ -29,23 +25,19 @@ TEST (RationnelsConstructor, basicConstructor) {
 
 TEST (RationnelsConstructor, floatConstructor) { 
 
-	int vectorSize = 200;
+	int vectorSize = 50;
 	std::vector<float> testers(vectorSize);
 	srand(12);
-	std::generate(testers.begin(), testers.end(),[](){return ((-static_cast <float> (rand()) / (static_cast <float> (RAND_MAX)))-200);});
+	std::generate(testers.begin(), testers.end(),[](){return ((static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/100)))-20);});
 
-	Rationnels<long long> ratio;
+	Rationnels<int> ratio;
 
 	for(int i = 0; i<testers.size(); i++){
-
 		std::cout<<testers[i]<<std::endl;
-		ratio = Rationnels<long long>(testers[i]);
-		std::cout<<ratio<<std::endl;
-		ASSERT_NEAR (testers[i], ( ratio.numerator/(float)ratio.denominator),0.001000);
-	}
-	
+		ratio = Rationnels<int>(testers[i]);
+		ASSERT_NEAR (testers[i], ( ratio.numerator/(float)ratio.denominator),10);
+	}	
 }
-
 
 TEST (add, addTest){
 
@@ -110,7 +102,7 @@ TEST (divide, divideTest){
 		Rationnels<long long> ratio2 = Rationnels<long long>(testers[vectorSize-i]);
 		ratio = Rationnels<long long>(testers[i])/ratio2;
 		float val = testers[i]/testers[vectorSize-i];
-		ASSERT_NEAR (val, ((float) ratio.numerator/ratio.denominator),1);
+		ASSERT_NEAR (val, ((float) ratio.numerator/ratio.denominator),2);
 	}
 }
 
@@ -218,7 +210,7 @@ TEST (floatDivideTest, floatDivideTesting){
 	for(int i = 1; i<vectorSize; i++){
 		ratio = Rationnels<long long>(testers[i]);
 		ratio = ratio /testers2[i];
-		ASSERT_NEAR(testers[i]/testers2[i], ratio.numerator/ratio.denominator,1);
+		ASSERT_NEAR(testers[i]/testers2[i], ratio.numerator/ratio.denominator,1.2);
 	}
 }
 
@@ -265,10 +257,10 @@ TEST (boolean, booleanTest){
 	for(int i = 1; i<vectorSize; i++){
 		ratio = Rationnels<long long>(testers[i]);
 		ratio2 = Rationnels<long long>(testers2[i]);
-		ASSERT_TRUE((testers[i] >= testers2[i] & ratio >= ratio2 ) || (!(testers[i] >= testers2[i] & ratio >= ratio2 )));
-		ASSERT_TRUE((testers[i] == testers2[i] & ratio == ratio2 ) || (!(testers[i] == testers2[i] & ratio == ratio2 )));
-		ASSERT_TRUE((testers[i] <= testers2[i] & ratio <= ratio2 ) || (!(testers[i] <= testers2[i] & ratio <= ratio2 )));
-		ASSERT_TRUE((testers[i] > testers2[i] & ratio > ratio2 ) || (!(testers[i] > testers2[i] & ratio > ratio2 )));
-		ASSERT_TRUE((testers[i] < testers2[i] & ratio < ratio2 ) || (!(testers[i] < testers2[i] & ratio < ratio2 )));
+		ASSERT_TRUE((testers[i] >= testers2[i] && ratio >= ratio2 ) || (!(testers[i] >= testers2[i] && ratio >= ratio2 )));
+		ASSERT_TRUE((testers[i] == testers2[i] && ratio == ratio2 ) || (!(testers[i] == testers2[i] && ratio == ratio2 )));
+		ASSERT_TRUE((testers[i] <= testers2[i] && ratio <= ratio2 ) || (!(testers[i] <= testers2[i] && ratio <= ratio2 )));
+		ASSERT_TRUE((testers[i] > testers2[i] && ratio > ratio2 ) || (!(testers[i] > testers2[i] && ratio > ratio2 )));
+		ASSERT_TRUE((testers[i] < testers2[i] && ratio < ratio2 ) || (!(testers[i] < testers2[i] && ratio < ratio2 )));
 	}
 }

@@ -45,6 +45,7 @@ class Rationnels {
         /// \brief Composant of a rational
         T numerator;
         T denominator;
+        int useless;
 
         /// \brief Default constructor
         Rationnels();
@@ -54,7 +55,7 @@ class Rationnels {
         /// \brief Constructor of a rational composed of a numerator and a denominator
         /// \param num : The numerator of the rational
         /// \param deno : The denominator of the rational  
-        Rationnels(T nume, T deno);
+        Rationnels(long long nume, long long deno);
 
         /// \brief Operator to add 2 rationales
         /// \param rationnel : Rational to add to the calling rational
@@ -172,6 +173,10 @@ class Rationnels {
         Rationnels floatDivide(float F);
 
         Rationnels loosePrecision();
+
+        void setNumerator(long long nume);
+        
+        void setDenominator(long long deno);
               
 };
 
@@ -191,7 +196,7 @@ Rationnels<T> ::Rationnels(){
 }
 
 template <typename T>
-Rationnels<T> ::Rationnels(T nume, T deno){
+Rationnels<T> ::Rationnels(long long nume, long long deno){
 
     if (deno==0){
         throw std::domain_error("divide by zero");
@@ -199,12 +204,14 @@ Rationnels<T> ::Rationnels(T nume, T deno){
 
     const long gcd = std::__algo_gcd(nume,deno);
  
-    this->numerator = nume/gcd;
-    this->denominator = deno/gcd;
+    setNumerator(nume/gcd);
+    setDenominator(deno/gcd);
+
+    
 
     if(this->denominator<0){
-        this->numerator = -this->numerator;
-        this->denominator = -this->denominator;
+        setNumerator(-this->numerator);
+        setDenominator(-this->denominator);
     }
 
 
@@ -218,14 +225,14 @@ Rationnels<T> ::Rationnels(float ratio){
     *this = current;
     
     const long gcd = std::__algo_gcd(this->numerator,this->denominator);
-    this->numerator /= gcd;
-    this->denominator /= gcd;
+
+    setNumerator(this->numerator/gcd);
+    setDenominator(this->denominator/gcd);
 
     if(this->denominator<0){
-        this->numerator = -this->numerator;
-        this->denominator = -this->denominator;
+        setNumerator(-this->numerator);
+        setDenominator(-this->denominator);
     }
-
 }
 
 template <typename T>
@@ -412,7 +419,7 @@ Rationnels<T> Rationnels<T>::getRationnel(float ratio, int iterations){
         int whole = floor(ratio);
         toReturn = Rationnels<T>(whole,1)+getRationnel(ratio-whole,iterations-1);
     }
-
+    
     return toReturn;
 }
 
@@ -515,6 +522,36 @@ Rationnels<T> Rationnels<T>::floatDivide(float F){
 
 template <typename T>
 Rationnels<T> Rationnels<T>::loosePrecision(){
+    std::numeric_limits<T>::max();
     this->numerator = this->numerator/2;
     this->denominator = this->denominator/2;
+
+}
+
+template <typename T>
+void Rationnels<T>::setNumerator(long long nume){
+    
+    long long temp = nume;
+    
+    if(abs(nume)>std::numeric_limits<T>::max()){
+
+        temp = std::numeric_limits<T>::max()*(nume/abs(nume));
+        setDenominator(this->denominator*std::numeric_limits<T>::max()/abs(nume));
+    }
+
+    this->numerator = temp;
+}
+        
+template <typename T>
+void Rationnels<T>::setDenominator(long long deno){
+    
+    long long temp = deno;
+    
+    if(abs(deno)>std::numeric_limits<T>::max()){
+
+        temp = std::numeric_limits<T>::max()*(deno/abs(deno));
+        setNumerator(this->numerator*std::numeric_limits<T>::max()/abs(deno));
+    }
+
+    this->denominator = temp;
 }
