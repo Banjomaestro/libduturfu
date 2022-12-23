@@ -1,6 +1,2 @@
 # Hashes of file build rules.
-<<<<<<< HEAD
 eb30702083e6a97c77dd276ebeab5bbc INTERFACE/doc/CMakeFiles/html
-=======
-8d19424ebb04e3afe6281335e853a647 INTERFACE/doc/CMakeFiles/html
->>>>>>> 6be7a9cff41a467bc0dd97e4d1ece20e73925fe7
