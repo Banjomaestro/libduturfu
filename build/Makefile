@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.24.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu"
+CMAKE_SOURCE_DIR = /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build"
+CMAKE_BINARY_DIR = /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/CMakeFiles /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

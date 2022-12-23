@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.24.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu"
+CMAKE_SOURCE_DIR = /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build"
+CMAKE_BINARY_DIR = /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build
 
 # Include any dependencies generated for this target.
 include my_examples/CMakeFiles/main.dir/depend.make
@@ -70,18 +70,18 @@ include my_examples/CMakeFiles/main.dir/progress.make
 include my_examples/CMakeFiles/main.dir/flags.make
 
 my_examples/CMakeFiles/main.dir/src/main.cpp.o: my_examples/CMakeFiles/main.dir/flags.make
-my_examples/CMakeFiles/main.dir/src/main.cpp.o: /Users/mac/Documents/lessons/imac/second\ year/first\ semester/libduturfu/my_examples/src/main.cpp
+my_examples/CMakeFiles/main.dir/src/main.cpp.o: /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/my_examples/src/main.cpp
 my_examples/CMakeFiles/main.dir/src/main.cpp.o: my_examples/CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object my_examples/CMakeFiles/main.dir/src/main.cpp.o"
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/my_examples" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT my_examples/CMakeFiles/main.dir/src/main.cpp.o -MF CMakeFiles/main.dir/src/main.cpp.o.d -o CMakeFiles/main.dir/src/main.cpp.o -c "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/my_examples/src/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object my_examples/CMakeFiles/main.dir/src/main.cpp.o"
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/my_examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT my_examples/CMakeFiles/main.dir/src/main.cpp.o -MF CMakeFiles/main.dir/src/main.cpp.o.d -o CMakeFiles/main.dir/src/main.cpp.o -c /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/my_examples/src/main.cpp
 
 my_examples/CMakeFiles/main.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/main.cpp.i"
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/my_examples" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/my_examples/src/main.cpp" > CMakeFiles/main.dir/src/main.cpp.i
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/my_examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/my_examples/src/main.cpp > CMakeFiles/main.dir/src/main.cpp.i
 
 my_examples/CMakeFiles/main.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/main.cpp.s"
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/my_examples" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/my_examples/src/main.cpp" -o CMakeFiles/main.dir/src/main.cpp.s
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/my_examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/my_examples/src/main.cpp -o CMakeFiles/main.dir/src/main.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -94,18 +94,18 @@ bin/main: my_examples/CMakeFiles/main.dir/src/main.cpp.o
 bin/main: my_examples/CMakeFiles/main.dir/build.make
 bin/main: INTERFACE/libRationnels.a
 bin/main: my_examples/CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/main"
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/my_examples" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/main"
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/my_examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 my_examples/CMakeFiles/main.dir/build: bin/main
 .PHONY : my_examples/CMakeFiles/main.dir/build
 
 my_examples/CMakeFiles/main.dir/clean:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/my_examples" && $(CMAKE_COMMAND) -P CMakeFiles/main.dir/cmake_clean.cmake
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/my_examples && $(CMAKE_COMMAND) -P CMakeFiles/main.dir/cmake_clean.cmake
 .PHONY : my_examples/CMakeFiles/main.dir/clean
 
 my_examples/CMakeFiles/main.dir/depend:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/my_examples" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/my_examples" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/my_examples/CMakeFiles/main.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/my_examples /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/my_examples /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/my_examples/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : my_examples/CMakeFiles/main.dir/depend
 

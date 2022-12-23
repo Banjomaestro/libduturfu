@@ -1,4 +1,4 @@
-# Install script for directory: /Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/Rationnels
+# Install script for directory: /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/Rationnels
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -46,7 +46,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE/libRationnels.a")
+  file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/INTERFACE/libRationnels.a")
   if(EXISTS "$ENV{DESTDIR}/usr/local/lib/libRationnels.a" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/libRationnels.a")
     execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" "$ENV{DESTDIR}/usr/local/lib/libRationnels.a")
@@ -55,8 +55,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE/doc/cmake_install.cmake")
-  include("/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE/UnitTest/cmake_install.cmake")
+  include("/Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/INTERFACE/doc/cmake_install.cmake")
+  include("/Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/INTERFACE/UnitTest/cmake_install.cmake")
 
 endif()
 

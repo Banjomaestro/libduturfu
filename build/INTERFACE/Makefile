@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.24.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu"
+CMAKE_SOURCE_DIR = /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build"
+CMAKE_BINARY_DIR = /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/INTERFACE//CMakeFiles/progress.marks"
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build/CMakeFiles" 0
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/CMakeFiles /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/INTERFACE//CMakeFiles/progress.marks
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/clean
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/preinstall
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/preinstall
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 INTERFACE/CMakeFiles/Rationnels.dir/rule:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/CMakeFiles/Rationnels.dir/rule
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERFACE/CMakeFiles/Rationnels.dir/rule
 .PHONY : INTERFACE/CMakeFiles/Rationnels.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ Rationnels: INTERFACE/CMakeFiles/Rationnels.dir/rule
 
 # fast build rule for target.
 Rationnels/fast:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/build
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/build
 .PHONY : Rationnels/fast
 
 src/Rationnels.o: src/Rationnels.cpp.o
@@ -180,7 +180,7 @@ src/Rationnels.o: src/Rationnels.cpp.o
 
 # target to build an object file
 src/Rationnels.cpp.o:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.o
 .PHONY : src/Rationnels.cpp.o
 
 src/Rationnels.i: src/Rationnels.cpp.i
@@ -188,7 +188,7 @@ src/Rationnels.i: src/Rationnels.cpp.i
 
 # target to preprocess a source file
 src/Rationnels.cpp.i:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.i
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.i
 .PHONY : src/Rationnels.cpp.i
 
 src/Rationnels.s: src/Rationnels.cpp.s
@@ -196,7 +196,7 @@ src/Rationnels.s: src/Rationnels.cpp.s
 
 # target to generate assembly for a file
 src/Rationnels.cpp.s:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.s
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(MAKE) $(MAKESILENT) -f INTERFACE/CMakeFiles/Rationnels.dir/build.make INTERFACE/CMakeFiles/Rationnels.dir/src/Rationnels.cpp.s
 .PHONY : src/Rationnels.cpp.s
 
 # Help Target
@@ -226,6 +226,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

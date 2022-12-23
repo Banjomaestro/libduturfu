@@ -1,4 +1,4 @@
-# Install script for directory: /Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/my_examples
+# Install script for directory: /Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/my_examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

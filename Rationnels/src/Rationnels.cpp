@@ -11,6 +11,11 @@ Rationnels ::Rationnels(long nume, long deno){
     this->numerator = nume/gcd;
     this->denominator = deno/gcd;
 
+    if(this->denominator<0){
+        this->numerator = -this->numerator;
+        this->denominator = -this->denominator;
+    }
+
 
 }
 
@@ -76,11 +81,8 @@ Rationnels Rationnels::operator!() const{
         throw std::domain_error("divide by zero");
     }
 
-    if (numerator==0){
-        return 0;
-    }
-
-    return Rationnels(denominator,numerator);
+    else
+        return Rationnels(denominator,numerator);
 }
 
 
@@ -91,7 +93,7 @@ Rationnels Rationnels::operator/(const Rationnels rationnel) const{
     }
 
     Rationnels temp = rationnel;
-    temp.reverse();
+    temp = !temp;
 
     return *this*temp;
 }
@@ -218,26 +220,13 @@ Rationnels Rationnels::getRationnel(float ratio, int iterations){
         toReturn = Rationnels(0,1);
     }else if(abs(ratio)<1){
         toReturn = getRationnel(1/ratio, iterations);
-        toReturn.reverse();
+        toReturn = !toReturn;
     }else{
         int whole = floor(ratio);
         toReturn = Rationnels(whole,1)+getRationnel(ratio-whole,iterations-1);
     }
 
     return toReturn;
-}
-
-Rationnels Rationnels::reverse(){
-
-    if (numerator==0){
-        throw std::domain_error("divide by zero");
-    }
-
-    long long temp = denominator;
-    this->denominator = this->numerator;
-    this->numerator = temp;
-
-    return *this;
 }
 
 Rationnels Rationnels::exponentielle() {

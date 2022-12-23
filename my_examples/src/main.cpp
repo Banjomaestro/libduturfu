@@ -97,7 +97,7 @@ int main(){
     std::cout<<"exponentielle "<<test7.exponentielle()<<std::endl;
 
 //reverse
-    std::cout<<"reverse "<<test3.reverse();
+    std::cout<<"reverse "<<!test3;
 
 
 //exceptions
@@ -127,7 +127,7 @@ int main(){
     }
 
     try{
-        Rationnels reverse_zero = test1.reverse();
+        Rationnels reverse_zero = !test1;
         std::cout<<reverse_zero<<std::endl;
     }
     catch(std::exception &e){

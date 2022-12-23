@@ -54,10 +54,6 @@ class Rationnels {
         /// \param deno : The denominator of the rational  
         Rationnels(long nume, long deno);
 
-        /// \brief Inverse of a rational
-        /// \return The inverse of a rational
-        Rationnels reverse();
-
         /// \brief Operator to add 2 rationales
         /// \param rationnel : Rational to add to the calling rational
         /// \return The sum of the current rationnal and the argument rationnal

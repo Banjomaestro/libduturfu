@@ -4,7 +4,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/Users/mac/Documents/lessons/imac/second year/first semester/libduturfu/include" -isystem /usr/local/include
+CXX_INCLUDES = -I/Users/mac/Documents/lessons/imac/second_year/first_semester/libduturfu/include -isystem /usr/local/include
 
 CXX_FLAGS =  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -std=gnu++14
 

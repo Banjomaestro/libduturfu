@@ -108,7 +108,7 @@ TEST (reverse, reverseTest){
 
 	for(int i = 1; i<vectorSize; i++){
 		ratio = Rationnels(testers[i],testers[vectorSize-i]);
-		ratio.reverse();
+		ratio = !ratio;
 		const long gcd = std::__algo_gcd(testers[i],testers[vectorSize-i]);
 		ASSERT_EQ (testers[i]/gcd,ratio.denominator);
 		ASSERT_EQ (testers[vectorSize-i]/gcd,ratio.numerator);
