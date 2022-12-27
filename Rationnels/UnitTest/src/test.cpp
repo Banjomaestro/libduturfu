@@ -25,17 +25,18 @@ TEST (RationnelsConstructor, basicConstructor) {
 
 TEST (RationnelsConstructor, floatConstructor) { 
 
-	int vectorSize = 50;
+	int vectorSize = 500;
 	std::vector<float> testers(vectorSize);
 	srand(12);
-	std::generate(testers.begin(), testers.end(),[](){return ((static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/100)))-20);});
+	std::generate(testers.begin(), testers.end(),[](){return ((static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/1000)))-200);});
 
-	Rationnels<int> ratio;
+	Rationnels<long long> ratio;
 
 	for(int i = 0; i<testers.size(); i++){
 		std::cout<<testers[i]<<std::endl;
-		ratio = Rationnels<int>(testers[i]);
-		ASSERT_NEAR (testers[i], ( ratio.numerator/(float)ratio.denominator),10);
+		ratio = Rationnels<long long>(testers[i]);
+		std::cout<<ratio<< "   =    "<<ratio.numerator/(float)ratio.denominator<<std::endl;
+		ASSERT_NEAR (testers[i], ( ratio.numerator/(float)ratio.denominator),0.001);
 	}	
 }
 

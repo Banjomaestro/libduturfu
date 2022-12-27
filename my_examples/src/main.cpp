@@ -73,7 +73,7 @@ int main(){
 
 //convert float to ratio
     std::cout<<"Float to ratio "<< test_vide.getRationnel(0.5,50) <<std::endl;
-    std::cout<<"Float to ratio "<< test_vide.getRationnel(-0.5,50) <<std::endl;
+    std::cout<<"Float to ratio "<< Rationnels<int>(77.158416748046875) <<std::endl;
 
 //Logarithme
     std::cout<<"Logarithme "<<Rationnels<int>(1,3).logarithme()<<std::endl;
@@ -95,10 +95,6 @@ int main(){
 //exponentielle
     std::cout<<"exponentielle "<<test7.exponentielle()<<std::endl;
     std::cout<<"exponentielle "<<test1.exponentielle()<<std::endl;
-
-//exponentielle2
-    std::cout<<"exp2 : "<<test1.exponentielle2()<<std::endl;
-    std::cout<<"exp2 : "<<test7.exponentielle2()<<std::endl;
 
 //reverse
     std::cout<<"reverse "<<!test3;

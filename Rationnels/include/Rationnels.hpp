@@ -136,8 +136,6 @@ class Rationnels {
 	    /// \return The exponentielle of a rational
         Rationnels exponentielle();
 
-        Rationnels exponentielle2();
-
         /// \brief Compute the rational of the logarithme of the numerator minus the logarithme of the denominator (the rational has to be stricly positive)
 	    /// \return  The logarithme of a rational
         Rationnels logarithme();
@@ -172,11 +170,7 @@ class Rationnels {
 	    /// \return The division of a float and a rational
         Rationnels floatDivide(float F);
 
-        Rationnels loosePrecision();
-
-        void setNumerator(long long nume);
-        
-        void setDenominator(long long deno);
+        void setNoOverflow(long long nume, long long deno);
               
 };
 
@@ -204,17 +198,14 @@ Rationnels<T> ::Rationnels(long long nume, long long deno){
 
     const long gcd = std::__algo_gcd(nume,deno);
  
-    setNumerator(nume/gcd);
-    setDenominator(deno/gcd);
+    setNoOverflow(nume/gcd,deno/gcd);
 
     
 
     if(this->denominator<0){
-        setNumerator(-this->numerator);
-        setDenominator(-this->denominator);
+        this->numerator = -this->numerator; 
+        this->denominator = -this->denominator;
     }
-
-
 }
 
 template <typename T>
@@ -224,15 +215,8 @@ Rationnels<T> ::Rationnels(float ratio){
     
     *this = current;
     
-    const long gcd = std::__algo_gcd(this->numerator,this->denominator);
+   // const long long gcd = std::__algo_gcd(this->numerator,this->denominator);
 
-    setNumerator(this->numerator/gcd);
-    setDenominator(this->denominator/gcd);
-
-    if(this->denominator<0){
-        setNumerator(-this->numerator);
-        setDenominator(-this->denominator);
-    }
 }
 
 template <typename T>
@@ -429,18 +413,6 @@ Rationnels<T> Rationnels<T>::exponentielle() {
 }
 
 template <typename T>
-Rationnels<T> Rationnels<T>::exponentielle2(){
-
-    float result=1;
-    int nbiter=12;
-    for (unsigned int n=nbiter; n>=1; n--){
-        result = 1+(numerator*n*result)/denominator;
-    }
-
-    return getRationnel(result,50);    
-}
-
-template <typename T>
 Rationnels<T> Rationnels<T>::logarithme() {
     if (numerator==0 || denominator==0){
        throw std::domain_error("Impossible to do the logaritme of zero");
@@ -521,37 +493,17 @@ Rationnels<T> Rationnels<T>::floatDivide(float F){
 }
 
 template <typename T>
-Rationnels<T> Rationnels<T>::loosePrecision(){
-    std::numeric_limits<T>::max();
-    this->numerator = this->numerator/2;
-    this->denominator = this->denominator/2;
-
-}
-
-template <typename T>
-void Rationnels<T>::setNumerator(long long nume){
+void Rationnels<T>::setNoOverflow(long long nume, long long deno){
     
     long long temp = nume;
-    
-    if(abs(nume)>std::numeric_limits<T>::max()){
+    long long temp2 = deno;
 
-        temp = std::numeric_limits<T>::max()*(nume/abs(nume));
-        setDenominator(this->denominator*std::numeric_limits<T>::max()/abs(nume));
+    while(temp>=std::numeric_limits<T>::max() || temp<=std::numeric_limits<T>::min() || temp2>=std::numeric_limits<T>::max() || temp2<=std::numeric_limits<T>::min()){
+
+        temp = temp/2;
+        temp2 = temp2/2;
     }
 
     this->numerator = temp;
-}
-        
-template <typename T>
-void Rationnels<T>::setDenominator(long long deno){
-    
-    long long temp = deno;
-    
-    if(abs(deno)>std::numeric_limits<T>::max()){
-
-        temp = std::numeric_limits<T>::max()*(deno/abs(deno));
-        setNumerator(this->numerator*std::numeric_limits<T>::max()/abs(deno));
-    }
-
-    this->denominator = temp;
+    this->denominator = temp2;
 }
