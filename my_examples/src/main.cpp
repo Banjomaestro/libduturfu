@@ -13,7 +13,7 @@ int main(){
     Rationnels<int> test4 = Rationnels<int>(3,9);
     Rationnels<int> test5= Rationnels<int>(-1,2);
     Rationnels<int> test6= Rationnels<int>(16,25);
-    Rationnels<int> test7 = Rationnels<int>(1,1);
+    Rationnels<int> test7 = Rationnels<int>(1000,100);
     Rationnels<int> test = Rationnels<int>(314,200);
     Rationnels<int> test8 = Rationnels<int>(314,100);
     Rationnels<int> test_vide;

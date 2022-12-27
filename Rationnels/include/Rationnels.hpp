@@ -30,18 +30,24 @@
 /// \li The documentation is located in :
 /// 	- [path to build]/doc/doc-doxygen/html/index.html or 
 /// 	- or [path to build]/INTERFACE/doc/doc-doxygen/html/index.html
-
 /// \class Rationnels
 /// \brief Class defining a rational for algebra operations.
 template <typename T>
 
 class Rationnels {
-        
+    
+    private:
+        /// \brief Set the values of the numerator and the denominator making sure that neither of them go over the limit 
+        /// \param  nume: value for the numerator
+        /// \param  deno: value for the denominator 
+        void setNoOverflow(long long nume, long long deno);
+    
+
     public:
         /// \brief Composant of a rational
         T numerator;
         T denominator;
-        int useless;
+        
         /// \brief Default constructor
         Rationnels();
 
@@ -78,7 +84,7 @@ class Rationnels {
         /// \brief Operator to divide a rationnal to *this
         /// \param rationnel : Rational to divide to the calling rational
         /// \return The division of the current rationnal and the argument rationnal
-        Rationnels operator/(const Rationnels<T> rationnel);
+        Rationnels operator/(Rationnels<T> rationnel);
 
         /// \brief Operator to compare the equality of 2 rationnels
 	    /// \param  R: Rationnel to compare to the calling rationnel
@@ -163,20 +169,12 @@ class Rationnels {
         /// \brief Compute the division of a rational and the rational of a float 
         /// \param  F: Float to divide with the current rational 
 	    /// \return The division of a float and a rational
-        Rationnels floatDivide(float F);
-
-        /// \brief Set the values of the numerator and the denominator making sure that neither of them go over the limit 
-        /// \param  nume: value for the numerator
-        /// \param  deno: value for the denominator 
-        void setNoOverflow(long long nume, long long deno);
-              
+        Rationnels floatDivide(float F);         
 };
-
 /// \brief Overload the operator << for rational
 /// \param stream : Input stream
 /// \param v : The rational to output
 /// \return The output stream containing the rational data
-
 template <typename T>
 std::ostream& operator<< (std::ostream& stream, const Rationnels<T>& v){
     std::cout<<v.numerator<<"/"<<v.denominator<<std::endl;
@@ -224,8 +222,8 @@ Rationnels<T> Rationnels<T>::operator+(const Rationnels<T> rationnel) {
     }
 
     const long gcd = std::__algo_gcd(rationnel.denominator,denominator);
-    long newRatioDeno = rationnel.denominator/gcd;
-    long newDeno = denominator/gcd;
+    long long newRatioDeno = rationnel.denominator/gcd;
+    long long newDeno = denominator/gcd;
 
     return Rationnels<T>((numerator*newRatioDeno + newDeno*rationnel.numerator),newDeno*rationnel.denominator);
 }
@@ -255,13 +253,13 @@ Rationnels<T> Rationnels<T>::operator!(){
 }
 
 template <typename T>
-Rationnels<T> Rationnels<T>::operator/(const Rationnels<T> rationnel) {
+Rationnels<T> Rationnels<T>::operator/(Rationnels<T> rationnel) {
 
     if (this->numerator==0 ){
         return 0;
     }
 
-    return !(*this*rationnel);
+    return *this*(!rationnel);
 }
 
 template <typename T>
@@ -272,8 +270,8 @@ Rationnels<T> Rationnels<T>::operator-(const Rationnels<T> rationnel){
     }
 
     const long gcd = std::__algo_gcd(rationnel.denominator,denominator);
-    int newRatioDeno = rationnel.denominator/gcd;
-    int newDeno = denominator/gcd;
+    long long newRatioDeno = rationnel.denominator/gcd;
+    long long newDeno = denominator/gcd;
 
     return Rationnels<T>((numerator*newRatioDeno - newDeno*rationnel.numerator),newDeno*rationnel.denominator);
 }
@@ -367,11 +365,11 @@ template <typename T>
 Rationnels<T> Rationnels<T>::power(int n){
 
     if (numerator==0){
-        return 0;
+        return Rationnels<T>(0,1);
     }
 
     else if(n==0){
-        return 1;
+        return Rationnels<T>(1,1);
     }
 
     return Rationnels<T>(pow(numerator,n),pow(denominator, n));
@@ -397,7 +395,7 @@ Rationnels<T> Rationnels<T>::getRationnel(float ratio, int iterations){
 
 template <typename T>
 Rationnels<T> Rationnels<T>::exponentielle() {
-    return Rationnels<T>(exp((float) numerator/denominator));
+    return Rationnels<T>(exp((double) numerator/denominator));
 }
 
 template <typename T>
@@ -482,14 +480,19 @@ void Rationnels<T>::setNoOverflow(long long nume, long long deno){
     
     long long temp = nume;
     long long temp2 = deno;
-    int divider = 1;
 
-    while(temp>=std::numeric_limits<T>::max()/divider || temp<=std::numeric_limits<T>::min()/divider || temp2>=std::numeric_limits<T>::max()/divider || temp2<=std::numeric_limits<T>::min()/divider){
-
+    while(temp>=std::numeric_limits<T>::max()/2 || temp<=std::numeric_limits<T>::min()/2 || temp2>=std::numeric_limits<T>::max()/2 || temp2<=std::numeric_limits<T>::min()/2){
+        if(temp == 0){
+            break;
+        }
+        if(temp2==0){
+            temp2 = 1;
+            temp = INFINITY;
+            break;
+        }
         temp = temp/2;
         temp2 = temp2/2;
     }
-
     this->numerator = temp;
     this->denominator = temp2;
 }
