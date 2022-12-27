@@ -192,7 +192,7 @@ Rationnels<T> ::Rationnels(long long nume, long long deno){
         throw std::domain_error("divide by zero");
     }
 
-    const long gcd = std::__algo_gcd(nume,deno);
+    const long long gcd = std::__algo_gcd(nume,deno);
  
     setNoOverflow(nume/gcd,deno/gcd);
 
@@ -221,9 +221,8 @@ Rationnels<T> Rationnels<T>::operator+(const Rationnels<T> rationnel) {
         return *this;
     }
 
-    const long gcd = std::__algo_gcd(rationnel.denominator,denominator);
-    long long newRatioDeno = rationnel.denominator/gcd;
-    long long newDeno = denominator/gcd;
+    long long newRatioDeno = rationnel.denominator;
+    long long newDeno = denominator;
 
     return Rationnels<T>((numerator*newRatioDeno + newDeno*rationnel.numerator),newDeno*rationnel.denominator);
 }
@@ -269,9 +268,8 @@ Rationnels<T> Rationnels<T>::operator-(const Rationnels<T> rationnel){
         return 0;
     }
 
-    const long gcd = std::__algo_gcd(rationnel.denominator,denominator);
-    long long newRatioDeno = rationnel.denominator/gcd;
-    long long newDeno = denominator/gcd;
+    long long newRatioDeno = rationnel.denominator;
+    long long newDeno = denominator;
 
     return Rationnels<T>((numerator*newRatioDeno - newDeno*rationnel.numerator),newDeno*rationnel.denominator);
 }
