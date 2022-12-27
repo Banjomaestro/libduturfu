@@ -481,7 +481,7 @@ void Rationnels<T>::setNoOverflow(long long nume, long long deno){
     long long temp = nume;
     long long temp2 = deno;
 
-    while(temp>=std::numeric_limits<T>::max()/2 || temp<=std::numeric_limits<T>::min()/2 || temp2>=std::numeric_limits<T>::max()/2 || temp2<=std::numeric_limits<T>::min()/2){
+    while(temp>=std::numeric_limits<T>::max() || temp<=std::numeric_limits<T>::min() || temp2>=std::numeric_limits<T>::max() || temp2<=std::numeric_limits<T>::min()){
         if(temp == 0){
             break;
         }
