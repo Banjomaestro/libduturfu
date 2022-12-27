@@ -30,12 +30,10 @@ TEST (RationnelsConstructor, floatConstructor) {
 	srand(12);
 	std::generate(testers.begin(), testers.end(),[](){return ((static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/1000)))-200);});
 
-	Rationnels<long long> ratio;
+	Rationnels<int> ratio;
 
 	for(int i = 0; i<testers.size(); i++){
-		std::cout<<testers[i]<<std::endl;
-		ratio = Rationnels<long long>(testers[i]);
-		std::cout<<ratio<< "   =    "<<ratio.numerator/(float)ratio.denominator<<std::endl;
+		ratio = Rationnels<int>(testers[i]);
 		ASSERT_NEAR (testers[i], ( ratio.numerator/(float)ratio.denominator),0.001);
 	}	
 }
@@ -62,7 +60,6 @@ TEST (sub, subTest){
 
 	int vectorSize = 100;
 	std::vector<float> testers(vectorSize);
-
 	std::generate(testers.begin(), testers.end(),[] ()  { return (static_cast <float> (rand()) / static_cast <float> (RAND_MAX/100)); });
 	Rationnels<long long> ratio;
 
@@ -79,7 +76,6 @@ TEST (multiply, multiplyTest){
 
 	int vectorSize = 100;
 	std::vector<float> testers(vectorSize);
-
 	std::generate(testers.begin(), testers.end(),[] () { return (static_cast <float> (rand()) / static_cast <float> (RAND_MAX/50)); });
 	Rationnels<long long> ratio;
 
@@ -124,12 +120,12 @@ TEST (exponential, exponentialTest){
 
 	int vectorSize = 100;
 	std::vector<float> testers(vectorSize);
-	std::generate(testers.begin(), testers.end(),[] () { return ((static_cast <float> (rand()) / static_cast <float> (RAND_MAX/2))); });
-	Rationnels<long long> ratio;
+	std::generate(testers.begin(), testers.end(),[] () { return ((static_cast <float> (rand()) / static_cast <float> (RAND_MAX/10))-10); });
+	Rationnels<int> ratio;
 
 	for(int i = 1; i<vectorSize; i++){
-		ratio = Rationnels<long long>(testers[i]).exponentielle();
-		ASSERT_NEAR(exp(testers[i]), ((float) ratio.numerator/ratio.denominator),2);
+		ratio = Rationnels<int>(testers[i]).exponentielle();
+		ASSERT_NEAR(exp(testers[i]), ((float) ratio.numerator/ratio.denominator),0.1);
 	}
 }
 
@@ -233,15 +229,13 @@ TEST (power, powerTest){
 
 	int vectorSize = 100;
 	std::vector<float> testers(vectorSize);
-	std::generate(testers.begin(), testers.end(),[] () { return (((static_cast <float> (rand()) / static_cast <float> (RAND_MAX/2))-100)); });
-	std::vector<int> testersPower(vectorSize);
-	std::generate(testersPower.begin(), testersPower.end(),[] () { return (((static_cast <int> (rand()) / static_cast <int> (RAND_MAX/10))-5)); });
+	std::generate(testers.begin(), testers.end(),[] () { return (((static_cast <float> (rand()) / static_cast <float> (RAND_MAX))-10)); });
 	Rationnels<long long> ratio;
 
 	for(int i = 1; i<vectorSize; i++){
 		ratio = Rationnels<long long>(testers[i]);
-		ratio.power(testersPower[i]);
-		ASSERT_NEAR(pow(testers[i],testersPower[i]), ratio.numerator/ratio.denominator,1);
+		ratio = ratio.power(2);
+		ASSERT_NEAR(pow(testers[i],2), ratio.numerator/ratio.denominator,1);
 	}
 }
 

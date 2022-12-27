@@ -31,22 +31,17 @@
 /// 	- [path to build]/doc/doc-doxygen/html/index.html or 
 /// 	- or [path to build]/INTERFACE/doc/doc-doxygen/html/index.html
 
-
 /// \class Rationnels
 /// \brief Class defining a rational for algebra operations.
-
-
 template <typename T>
 
 class Rationnels {
         
     public:
-
         /// \brief Composant of a rational
         T numerator;
         T denominator;
         int useless;
-
         /// \brief Default constructor
         Rationnels();
 
@@ -170,6 +165,9 @@ class Rationnels {
 	    /// \return The division of a float and a rational
         Rationnels floatDivide(float F);
 
+        /// \brief Set the values of the numerator and the denominator making sure that neither of them go over the limit 
+        /// \param  nume: value for the numerator
+        /// \param  deno: value for the denominator 
         void setNoOverflow(long long nume, long long deno);
               
 };
@@ -200,8 +198,6 @@ Rationnels<T> ::Rationnels(long long nume, long long deno){
  
     setNoOverflow(nume/gcd,deno/gcd);
 
-    
-
     if(this->denominator<0){
         this->numerator = -this->numerator; 
         this->denominator = -this->denominator;
@@ -214,9 +210,6 @@ Rationnels<T> ::Rationnels(float ratio){
     Rationnels<T> current = getRationnel(ratio,10);
     
     *this = current;
-    
-   // const long long gcd = std::__algo_gcd(this->numerator,this->denominator);
-
 }
 
 template <typename T>
@@ -296,7 +289,6 @@ bool Rationnels<T>::operator==(const Rationnels<T> &R){
     if (numerator == R.numerator && denominator == R.denominator){
         return true;
     }
-    
     else{
         return false;
     }
@@ -307,8 +299,7 @@ bool Rationnels<T>::operator!=(const Rationnels<T> &R){
 
     if (numerator != R.numerator || denominator != R.denominator){
         return true;
-    }
-    
+    } 
     else{
         return false;
     }
@@ -318,8 +309,7 @@ template <typename T>
 bool Rationnels<T>::operator<=(Rationnels<T> R){
     if (numerator*R.denominator<= R.numerator*denominator){
         return true;
-    }
-    
+    }   
     else{
         return false;
     }
@@ -330,7 +320,6 @@ bool Rationnels<T>::operator>=(Rationnels<T> R){
     if (numerator*R.denominator>= R.numerator*denominator){
         return true;
     }
-
     else{
         return false;
     }   
@@ -341,7 +330,6 @@ bool Rationnels<T>::operator<(Rationnels<T> R){
     if (numerator*R.denominator< R.numerator*denominator){
         return true;
     }
-    
     else{
         return false;
     }
@@ -476,19 +464,16 @@ Rationnels<T> Rationnels<T>::absolue(){
 template <typename T>
 int Rationnels<T>::whole(){
     int k = numerator/denominator;
-
     return k;
 }
 
 template <typename T>
 Rationnels<T> Rationnels<T>::floatProduct(float F){
-
     return *this * Rationnels<T>(F);
 }
 
 template <typename T>
 Rationnels<T> Rationnels<T>::floatDivide(float F){
-
     return *this / Rationnels<T>(F);
 }
 
@@ -497,8 +482,9 @@ void Rationnels<T>::setNoOverflow(long long nume, long long deno){
     
     long long temp = nume;
     long long temp2 = deno;
+    int divider = 1;
 
-    while(temp>=std::numeric_limits<T>::max() || temp<=std::numeric_limits<T>::min() || temp2>=std::numeric_limits<T>::max() || temp2<=std::numeric_limits<T>::min()){
+    while(temp>=std::numeric_limits<T>::max()/divider || temp<=std::numeric_limits<T>::min()/divider || temp2>=std::numeric_limits<T>::max()/divider || temp2<=std::numeric_limits<T>::min()/divider){
 
         temp = temp/2;
         temp2 = temp2/2;
